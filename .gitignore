@@ -1,0 +1,16 @@
+# Ignore environment files
+.env
+
+# Ignore Composer dependencies (for PHP projects)
+vendor/
+
+# Ignore Node.js dependencies (if applicable)
+node_modules/
+
+# Ignore system files
+.DS_Store
+thumbs.db
+
+# Ignore cache files
+storage/
+cache/
