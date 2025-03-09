@@ -8,4 +8,8 @@ class PickupController extends BaseController
     {
         echo view('pickup/index');
     }
+    public function pickAdd()
+    {
+        echo view('pickup/addModal');
+    }
 }

@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('pickup', 'pickupController::pickIndex');
+$routes->get('addModal', 'pickupController::pickAdd');
