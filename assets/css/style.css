@@ -1,6 +1,6 @@
 @import url("table.css");
-@import url('jquery.dataTables.min.css');
-@import url('responsive.dataTables.min.css');
+/*@import url('jquery.dataTables.min.css');
+@import url('responsive.dataTables.min.css');*/
 @import url("fontawesome.css");
 @import url("tablesummary.css");
 @import url("taskheader.css");
@@ -46,6 +46,7 @@
 @import url("tabcarousel.css");
 @import url("salescopy.css");
 @import url("draglist.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
   scroll-behavior: smooth;
@@ -3067,7 +3068,6 @@ div.dt-buttons {
 }
 
 /* NEW DRAG AND DROP CSS */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .drag-file-area {
   border: 2px dashed #ced4da !important;
