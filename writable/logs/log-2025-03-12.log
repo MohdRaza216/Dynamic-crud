@@ -1,0 +1,201 @@
+CRITICAL - 2025-03-12 06:24:42 --> Error: Class "App\Controllers\PickupModel" not found
+[Method: GET, Route: pickup]
+in APPPATH\Controllers\pickupController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:25:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: pickup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\pickupController.php(14): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:26:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: pickup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\pickupController.php(14): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:27:19 --> ErrorException: Undefined variable $pickups
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 57.
+ 1 APPPATH\Views\pickup\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pickups', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:29:33 --> ErrorException: Undefined variable $pickups
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 57.
+ 1 APPPATH\Views\pickup\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pickups', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:30:06 --> ErrorException: Undefined variable $pickups
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 57.
+ 1 APPPATH\Views\pickup\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pickups', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:30:10 --> ErrorException: Undefined variable $pickups
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 57.
+ 1 APPPATH\Views\pickup\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pickups', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:35:30 --> ErrorException: Undefined array key "order_type"
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 27.
+ 1 APPPATH\Views\pickup\index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "order_type"', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(15): view('pickup/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:38:50 --> ErrorException: Undefined array key "order_type"
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup_orders.php on line 27.
+ 1 APPPATH\Views\pickup_orders.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "order_type"', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup_orders.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup_orders.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup_orders', [], true)
+ 5 APPPATH\Controllers\pickupController.php(15): view('pickup_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:39:05 --> ErrorException: Undefined array key "order_type"
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup_orders.php on line 27.
+ 1 APPPATH\Views\pickup_orders.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "order_type"', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup_orders.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup_orders.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup_orders', [], true)
+ 5 APPPATH\Controllers\pickupController.php(15): view('pickup_orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:42:24 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 24.
+ 1 APPPATH\Views\pickup\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:42:25 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 24.
+ 1 APPPATH\Views\pickup\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 06:42:26 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 24.
+ 1 APPPATH\Views\pickup\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 07:15:28 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 24.
+ 1 APPPATH\Views\pickup\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-12 07:15:29 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 24.
+ 1 APPPATH\Views\pickup\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(11): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
