@@ -124,8 +124,10 @@ input.dt-button {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  margin-left: 0.167em;
-  margin-right: 0.167em;
+  margin-left: 0.567em;
+  /* margin-right: 0.167em; */
+  margin-right: 0em !important;
+
   margin-bottom: 0.333em;
   padding: 0.5em 1em;
   border: 1px solid rgba(0, 0, 0, 0.3);

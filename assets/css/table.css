@@ -58,13 +58,19 @@ table.dataTable {
   font-family: var(--primary-font) !important;
   background: #fff;
 }
+.demo-html {
+  overflow: hidden;
+}
 
 .tblcontainer {
-  padding: 8px 10px;
+  padding: 10px 10px;
   background-color: #fff;
   table-layout: fixed;
   box-shadow: 0px 6px 13px -3px rgb(173 173 173);
-  margin-top: 14px;
+  margin-top: 36px;
+  border-radius: 4px;
+  border-top-left-radius: 0px !important;
+  /* overflow: hidden; */
 }
 
 .dataTables_wrapper {
@@ -86,8 +92,6 @@ table tr td {
 
 .theadrow {
   box-shadow: 4px 1px 21px -11px rgb(173 173 173) !important;
-
-  border: 5px solid rgb(0, 0, 0) !important;
 }
 
 table th {
@@ -118,7 +122,6 @@ table.dataTable tbody > tr:hover > * {
 
 .dataTables_wrapper .dataTables_paginate {
   font-family: var(--primary-font) !important;
-  padding-right: 15px;
   padding-bottom: 20px;
   margin-top: 10px;
 }
@@ -161,7 +164,7 @@ table.dataTable > tbody > tr.child ul.dtr-details > li {
 .example > tbody > tr > td {
   padding: 16px 10px 12px 10px;
   line-height: 1.42857143;
-  vertical-align: top;
+  vertical-align: center;
 }
 .demo-html label {
   background: none !important;
@@ -176,12 +179,9 @@ table.dataTable > tbody > tr.child ul.dtr-details > li {
 .example > tbody > tr > td {
   padding: 0px 10px 0px 10px;
   line-height: 1.42857143;
-  vertical-align: baseline;
+  vertical-align: center;
 }
 /* New table css */
-.jexcel {
-  display: inline-block;
-}
 
 .jexcel > div.jexcel-toolbar {
   display: flex;
@@ -724,19 +724,20 @@ table.dataTable > tbody > tr.child ul.dtr-details > li {
 }
 
 .sub-menu {
-  position: absolute;
+  /*position: absolute;*/
   top: 100%;
   /* Position it just below the context menu */
   left: 0;
   /* Adjust as needed to align with the context menu */
-  width: 50%;
+  /* width: 50%;
+    z-index: 999999 !important;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 0 rgba(143, 144, 145, 1);
+  */
   display: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  /* background-color: #fff; */
   padding: 5px 0px;
-  z-index: 999999 !important;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px 0 rgba(143, 144, 145, 1);
 }
 
 .example-context-menu:hover .sub-menu {
@@ -768,4 +769,17 @@ table.dataTable > tbody > tr.child ul.dtr-details > li {
 }
 a[download].receipt {
   max-width: 12ch !important;
+}
+
+.example tbody tr td {
+  padding: 10px;
+}
+.tblcontainer {
+  margin-top: 0px !important;
+}
+#second_column #task-table_wrapper {
+  overflow: scroll;
+}
+#second_column #task-table_wrapper::-webkit-scrollbar {
+  height: 5px;
 }

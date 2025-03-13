@@ -242,15 +242,23 @@ td span {
 }
 
 .custml {
-  margin-left: -16px;
+  /* margin-left: -16px; */
 }
 
-.billingmb {
+.billingmb{
+  justify-content: space-between;
+  display: flex;
   margin-top: 10px;
-  margin-bottom: -17px;
-  margin-left: -16px;
+  margin-bottom: 5px;
+  margin-left: 0px;
 }
-
+.billingmb .billaddhdr{
+  font-size: 18px; 
+}
+.billingmb .custinfoven{
+  font-size: 14px;
+  color: gray;
+}
 .salesexpbtn {
   background-color: #ff6f00 !important;
   border: none;
@@ -297,16 +305,19 @@ td span {
 .numfnt {
   font-size: 24px !important;
 }
-
+.manrowpd {
+  align-items: center;
+  justify-content: center;
+}
 @media(max-width:768px) {
   .splitbx {
     width: 48% !important;
   }
 }
 
-.manrowpd {
+/* .manrowpd {
   margin-left: -9px;
-}
+} */
 
 .splitbx {
   padding: 10px 10px;
@@ -316,6 +327,7 @@ td span {
 .agtplpr {
   padding-left: 8px !important;
   padding-right: 10px !important;
+  background-color: #ffff !important;
 }
 
 .statusfnt {

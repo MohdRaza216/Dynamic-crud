@@ -73,7 +73,7 @@ body {
   border: none;
 }
 
-.dropdown-menu .dropdown-item>li>a:hover {
+.dropdown-menu .dropdown-item > li > a:hover {
   background-image: none;
   background-color: #000 !important;
   display: inline-block;
@@ -121,8 +121,11 @@ td:hover {
 }
 
 .header-effect {
+  /* position: static !important; */
   visibility: hidden;
   margin-bottom: -4px;
+  /* display: flex; */
+  gap: 0.5rem;
 }
 
 td:hover .header-effect {
@@ -260,8 +263,8 @@ button.dt-btn-split-drop:hover {
 
 .dataTables_wrapper .dataTables_length select {
   box-shadow: 0px 1px 3px 0px rgba(238, 242, 247, 0.5) !important;
-  padding: 7.2px 0px !important;
-  margin-right: 10px !important;
+  padding: 4.15px 0px !important;
+  margin-right: 10px;
   font-size: 0.9rem !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
@@ -279,7 +282,7 @@ button.dt-btn-split-drop:hover {
 .dataTables_wrapper .dataTables_length select {
   box-shadow: 0px 1px 3px 0px rgba(238, 242, 247, 0.5) !important;
   padding: 7.2px 0px;
-  margin-right: 9px !important;
+  margin-right: 9px;
   font-size: 0.9rem;
   font-weight: 400 !important;
   line-height: 1.5 !important;
@@ -292,17 +295,25 @@ button.dt-btn-split-drop:hover {
   justify-content: end !important;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 768px) {
   .dataTables_wrapper .dataTables_length select {
     position: absolute;
-    top: 84px;
-    left: 204px;
+    top: 86px;
+    left: 130px;
+  }
+  .dataTables_wrapper .dataTables_length select[name="payment-table_length"] {
+    position: absolute;
+    top: 86px;
+    left: 67px;
+  }
+  #payment-table_wrapper .dt-buttons {
+    margin-bottom: 75px !important;
   }
 }
 
 .dataTables_wrapper .dataTables_length select:hover {
   box-shadow: 0px 1px 3px 0px rgba(238, 242, 247, 0.5) !important;
-  padding: 7.2px 0px !important;
+  padding: 4.15px 0px !important;
   font-size: 0.9rem !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
@@ -319,7 +330,8 @@ button.dt-btn-split-drop:hover {
 }
 
 input[type="checkbox"] {
-  margin-top: 8px !important;
+  margin-top: 3px !important;
+  margin-right: 3px;
 }
 
 .header-effect {
@@ -328,7 +340,7 @@ input[type="checkbox"] {
 
 div.dt-buttons .dt-button {
   box-shadow: 0px 1px 3px 0px rgba(238, 242, 247, 0.5) !important;
-  padding: 0.45rem 0.9rem;
+  padding: 0.25rem 0.9rem;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
@@ -338,11 +350,44 @@ div.dt-buttons .dt-button {
   border: 1px solid transparent !important;
   border-radius: 0.15rem !important;
   background-color: #eef2f7;
+  height: 100%;
+}
+div.dt-buttons .dt-button:hover {
+  box-shadow: 0px 1px 3px 0px rgba(238, 242, 247, 0.5) !important;
+  padding: 0.25rem 0.9rem;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5;
+  color: #313a46 !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.15rem !important;
+  background-color: #d9dadd !important;
+  /* margin: 0px 0px 0px 0px !important;
+          float: inline-end !important;
+          flex: auto !important; */
+}
+div.dt-buttons .dt-button span i {
+  margin-left: 0px !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  padding: 0.34em 0.72em !important;
+  /* padding: 0.34em 0.72em !important; */
+}
+
+label.ali_cent {
+  display: flex;
 }
 
 /*
 */
+
+.purchasegrp.mrtp {
+  margin-top: 11px;
+}
+
+input[type="checkbox"].chk_marg {
+  margin-top: 2px !important;
+  margin-right: 2px !important;
+}

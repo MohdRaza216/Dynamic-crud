@@ -10,3 +10,4 @@ $routes->get('pickup', 'PickupController::pickIndex');
 $routes->get('addModal', 'PickupController::pickAdd');
 $routes->get('orders', 'OrderController::index');
 $routes->get('db-check', 'PickupController::checkDatabase');
+$routes->post('savePickup', 'PickupController::pickSave');

@@ -1,0 +1,127 @@
+CRITICAL - 2025-03-13 06:01:55 --> PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'user.orders' doesn't exist
+[Method: GET, Route: pickup]
+in APPPATH\Controllers\pickupController.php on line 19.
+ 1 APPPATH\Controllers\pickupController.php(19): PDO->query('SELECT * FROM orders')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 06:02:21 --> ErrorException: require(db.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 2.
+ 1 APPPATH\Views\pickup\index.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(db.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 2)
+ 2 APPPATH\Views\pickup\index.php(2): require()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 6 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 06:47:21 --> mysqli_sql_exception: Unknown database 'your_database'
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 8.
+ 1 APPPATH\Views\pickup\index.php(8): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'your_database')
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 06:48:25 --> mysqli_sql_exception: Table 'user.orders' doesn't exist
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 41.
+ 1 APPPATH\Views\pickup\index.php(41): mysqli->query('SELECT * FROM orders')
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 06:49:32 --> mysqli_sql_exception: Table 'user.orders' doesn't exist
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 41.
+ 1 APPPATH\Views\pickup\index.php(41): mysqli->query('SELECT * FROM orders')
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 08:04:44 --> ErrorException: include(db.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 65.
+ 1 APPPATH\Views\pickup\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(db.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 65)
+ 2 APPPATH\Views\pickup\index.php(65): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 6 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 08:05:43 --> ErrorException: include(db.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 65.
+ 1 APPPATH\Views\pickup\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(db.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 65)
+ 2 APPPATH\Views\pickup\index.php(65): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 6 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 08:07:10 --> ErrorException: include(db.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 65.
+ 1 APPPATH\Views\pickup\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(db.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 65)
+ 2 APPPATH\Views\pickup\index.php(65): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 6 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 08:08:45 --> ErrorException: include(Config/db.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 65.
+ 1 APPPATH\Views\pickup\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Config/db.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 65)
+ 2 APPPATH\Views\pickup\index.php(65): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 6 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

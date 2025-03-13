@@ -39,10 +39,13 @@
 .finishedbtn {
   margin-left: 5px;
   padding: 6px 20px 6px !important;
+  background-color: transparent !important;
+  color: black !important;
 }
 
 .finishedbtn:hover {
-  background-color: #6fa326;
+  /* background-color: #6FA326; */
+  background-color: #cacbd1 !important;
 }
 
 /****layoff checklist*****/
@@ -57,7 +60,7 @@
 .fa-eye {
   border: none;
   /*color: #415164;*/
-  background-color: #f1f5f7 !important;
+  /* background-color: #f1f5f7 !important; */
 }
 
 .dataTables_wrapper .dataTables_filter input {
@@ -100,7 +103,7 @@ button.dt-btn-split-drop:hover {
 .file_in {
   border: 1px solid #919191;
   padding: 5px 12px;
-  border-radius: 6px 0px 0px 6px;
+  border-radius: 6px 6px 6px 6px;
   width: 100%;
   height: 36px;
 }
@@ -196,7 +199,7 @@ button.dt-btn-split-drop:hover {
   background-color: inherit;
   height: 36px;
   margin-top: 5px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #ced4da !important;
 }
 
 @media (min-width: 992px) {
@@ -251,8 +254,7 @@ button.dt-btn-split-drop:hover {
 /*****settings*****/
 
 .plusbtns {
-  /* background-color: #24acf2 !important; */
-  background-color: #405189 !important;
+  background-color: #24acf2 !important;
   border: none;
   padding: 6.5px 10px 7.5px;
   border-radius: 4px;
@@ -442,12 +444,16 @@ button.dt-btn-split-drop:hover {
   margin-top: 50px;
 }
 
+.contracttemphr.hr {
+  margin-top: 0px !important;
+}
+
 .pttick {
   margin-left: 5px;
 }
 
 .emailpro {
-  margin-top: 3px;
+  margin-top: 8px;
   margin-bottom: 5px;
 }
 
@@ -516,7 +522,7 @@ button.dt-btn-split-drop:hover {
 
 .groupicon {
   color: #0000ee !important;
-  border: 1px solid #b5b2b2d4;
+  border: 1px solid #b5b2b2d4 !important;
   background-color: inherit !important;
   padding: 5px 12px !important;
   margin-top: 5px;
@@ -524,7 +530,7 @@ button.dt-btn-split-drop:hover {
 }
 
 .bdrref {
-  border-left: none;
+  border-left: none !important;
 }
 
 .borderbot {
@@ -604,8 +610,8 @@ button.dt-btn-split-drop:hover {
 }
 
 #subject {
-  margin-top: 6px !important;
-  height: 36px !important;
+  margin-top: 3px !important;
+  /* height: 31px !important; */
 }
 
 @media (max-width: 399px) {
@@ -615,7 +621,7 @@ button.dt-btn-split-drop:hover {
   }
 
   .child {
-    padding-left: 0 !important;
+    padding-left: 10px !important;
   }
 }
 
@@ -759,7 +765,11 @@ button.dt-btn-split-drop:hover {
   border-radius: 4px;
   padding: 6px 5px !important;
   font-size: 15px !important;
-  width: 95%;
+  width: 98%;
+}
+
+.jobchse.hgt {
+  height: 34px !important;
 }
 
 .grntec {
@@ -1156,14 +1166,25 @@ button.dt-btn-split-drop:hover {
 } */
 
 .ctctgrnbtn {
-  /* background-color: #84c529; */
-  background-color: #405189;
+  background-color: #84c529;
   color: #fff;
   border-radius: 0px 6px 6px 0px;
   box-shadow: none !important;
   border: none;
   height: 36px;
   padding: 5px 10px;
+}
+
+.ctctgrnbtn.invent {
+  background-color: #84c529;
+  color: #fff;
+  border-radius: 0px 6px 6px 0px;
+  box-shadow: none !important;
+  border: none;
+  height: 36px;
+  padding: 5px 10px;
+  margin-left: -15px;
+  margin-top: 28px;
 }
 
 .ctctredbtn {
@@ -1179,16 +1200,18 @@ button.dt-btn-split-drop:hover {
   padding-top: 27px;
 }
 
+/* .hrbtns {
+  border: none;
+  border-radius: 4px;
+  margin: 15px 4px 0px 4px;
+  padding: 4px 10px 4px;
+  font-size: 16px;
+  font-family: var(--primary-font);
+  color: whitesmoke;
+} */
+
 .layoffbtn {
   margin-bottom: 20px;
-}
-
-.hrbtns:hover {
-  color: #fff;
-  /* background-color: #0295d4; */
-  /* border-color: #0295d4; */
-  background-color: #0585bb;
-  border-color: #0585bb;
 }
 
 @media (max-width: 768px) {
@@ -1546,4 +1569,65 @@ button.dt-btn-split-drop:hover {
   .onbselmt {
     margin-top: 0px !important;
   }
+}
+
+/* align the choose file in .subject */
+.subb1 {
+  height: 30px !important;
+}
+
+.hrbtns {
+  border: none;
+  margin: 15px 4px 4px 0px;
+  padding: 6px 10px !important;
+  display: inline-block;
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 13px Poppins, sans-serif !important;
+  text-align: center;
+  /* border-radius: 4px; */
+  transition: 400ms;
+  text-decoration: none;
+  z-index: 100000;
+}
+.addbttn {
+  background-color: #405189 !important;
+}
+.addbttn:hover {
+  color: #ffffff !important;
+  background-color: #485c9b !important;
+  background-color: #485c9b !important;
+}
+.mrg-rght-8 {
+  margin-right: -8px;
+}
+.tbbline {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.tbbline1 {
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: -7px;
+}
+.tab_mrg_lft {
+  margin-left: -15px;
+}
+.mrg-rght-10 {
+  margin-right: -10px;
+}
+.mrg-rght-11 {
+  margin-right: -11px;
+}
+.mrg-tp10 {
+  margin-top: 10px;
+}
+.tp-48 {
+  top: -48px !important;
+}
+.file_input_bx {
+  height: 30px !important;
+}
+.mrg-tp-15 {
+  margin-top: -15px !important;
 }

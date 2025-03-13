@@ -141,15 +141,14 @@
   border-radius: 4px;
   margin-left: 3px;
   margin-top: 15px;
-  padding: 4px 20px 4px;
-  font-size: 16px;
+  padding: 6px 12px;
+  font-size: 13px;
   font-family: var(--primary-font);
 }
 
 .back:hover {
-  color: #000 !important;
-  border: 1px solid transparent !important;
-  background-color: #ced1d2 !important;
+  color: #333;
+  background-color: #e6e2e2;
 }
 
 .dept {
@@ -273,10 +272,39 @@
   .back,
   .importdwnldbtn,
   .importback {
-    width: 100%;
-    margin-top: 10px;
+    width: 36%;
+    /* margin-top: 10px; */
     margin-right: 0px !important;
     margin-left: 0px !important;
+  }
+
+  .lead-btns {
+    position: absolute !important;
+    top: -47.6px !important;
+    right: 20px !important;
+    text-align: left;
+    padding-left: 20px !important;
+    padding-right: 0px !important;
+    display: flex;
+    height: 3rem;
+    overflow: hidden;
+  }
+
+  .deal-title-capsule {
+    top: 25px;
+  }
+
+  .tblcontainer {
+    /* position: fixed; */
+    width: 100vw;
+    margin-right: 15px;
+    margin-top: 100px;
+    left: 0px !important;
+  }
+
+  .sidebar.close5 {
+    z-index: 10000;
+    background-color: #0f0d0dba;
   }
 }
 
@@ -305,15 +333,32 @@
 }
 
 .contractfilter:hover {
-  background-color: #d3ebf7 !important;
+  background-color: #cfcfd1;
 }
 
-@media (max-width: 654px) {
-  .contractfilter {
-    width: auto !important;
-    margin-right: 6px !important;
-  }
+.impbtn-default {
+  background-color: #eec37a;
+  font-size: 13px !important;
+  margin: 0px 0px 0px 0px;
+  padding: 6px 12px;
+  display: inline-block;
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  transition: 400ms;
+  text-decoration: none;
+  border-radius: 4px;
 }
+
+.impbtn-default:hover {
+  background-color: #e2b971;
+}
+
+.impbtn-default.mrlef {
+  margin-left: 5px;
+}
+
 /********************************hr rec****************************/
 
 @media (max-width: 768px) {
@@ -445,6 +490,7 @@ body {
 /***************layoff***************/
 .tblcontainer {
   border: none;
+  margin: 0px 10px;
 }
 
 .but-round {
@@ -757,27 +803,29 @@ input:checked + .slider:before {
 }
 
 .plus-blue {
-  /* color: #008ece; */
-  color: #fff;
+  color: #405189;
   -webkit-text-stroke: 3px;
 }
 
 .image-plus {
-  /* background-color: #84c529; */
-  background-color: #405189;
+  background-color: #84c529;
   border-radius: 0px 4px 4px 0px;
   height: 36px !important;
-  margin-top: 5px !important;
+  /* margin-top: 5px !important; */
+}
+
+.image-plus.hgt {
+  height: 34px !important;
 }
 
 .plus-green {
-  -webkit-text-stroke: 3px;
+  -webkit-text-stroke: 1px;
   color: white;
-  /* background-color: #84c529; */
+  background-color: #84c529;
 }
 
-.impbtn-default {
-  background-color: #eec37a;
+.serial-num {
+  background-color: #0584c4 !important;
   border: none;
   margin: 15px 4px 4px 0px;
   padding: 6px 10px !important;
@@ -792,8 +840,8 @@ input:checked + .slider:before {
   z-index: 100000;
 }
 
-.impbtn-default:hover {
-  background-color: #e2b971;
+.serial-num:hover {
+  background-color: #02a9f0 !important;
 }
 
 .switchslider input {
@@ -825,35 +873,71 @@ input:checked + .slider {
 input:checked + .slider:before {
   left: -11px !important;
 }
+
 .sample {
   padding-left: 15px !important;
 }
+
 .sample5 {
   padding-left: 0px !important;
   margin-left: 0px !important;
 }
+
 .radioinvoice {
   margin-left: 0px !important;
 }
+
 .linehr5 {
   margin-top: 10px 0px 0px 0px !important;
 }
+
 .question5 {
   padding: 1rem 1.5rem 0.5rem 1.5rem !important;
 }
+
 .linktab {
   width: 10%;
   display: block;
 }
+
 .date1 {
   margin: 12px 0px 0px !important;
 }
+
 .addbtntrain {
   margin-bottom: 7px !important;
 }
+
 .trainhr {
   margin: 0px !important;
 }
+
 .excelfile {
   margin-left: 13px !important;
+}
+
+.importbtnbg {
+  background-color: #eec37a;
+  color: #fff;
+}
+
+.check-green {
+  color: green;
+  -webkit-text-stroke: 3px;
+}
+.mrg-rgt-10 {
+  margin-right: -10px;
+}
+.taskclose1 {
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .mrg-tp {
+    margin-top: 1.5rem !important;
+  }
+}
+.tskfoot {
+  padding-right: 15px;
+  background: white;
+  padding-bottom: 0px;
 }

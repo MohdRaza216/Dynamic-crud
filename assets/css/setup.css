@@ -37,6 +37,7 @@
  .t-font{
     font-size: 15px;
  }
+
  .tw-grid{
     gap: 0.75rem;
     display: flex;
@@ -890,3 +891,19 @@ a, a :hover{
 .td-text{
     vertical-align: top;
 }
+.mttsin{
+    margin-top: 10px;
+}
+.mtfiisin{
+    margin-top: -15px !important;
+}
+/* ... */
+.taskfooter.ftrbtm.text-end.mt-3.bg-white.alt_marg_btmm {
+    margin-left: 14px !important;
+    width: 97.5%;
+    height: 56px;
+  }
+  button.ask_marg {
+    margin-top: 10px;
+    margin-right: 19px !important;
+  }

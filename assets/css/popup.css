@@ -3,7 +3,6 @@
   box-shadow: none !important;
   margin-left: 5px;
   font-family: var(--primary-font);
-
 }
 
 @media (min-width: 768px) {
@@ -12,17 +11,15 @@
   }
 
   .taskcontent {
-
     padding: 0rem !important;
   }
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
   .modal-header {
     padding: none;
   }
 }
-
 
 .modal-header {
   display: block;
@@ -33,7 +30,6 @@
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
 }
-
 
 /*.modal-header .close{
     box-sizing: content-box;
@@ -58,11 +54,11 @@
   margin-bottom: 5px;
   padding: 5px 5px 5px;
   margin-left: 20px;
-  color: whitesmoke
+  color: whitesmoke;
 }
 
 .order:hover {
-  background-color: #1FA0BD;
+  background-color: #1fa0bd;
 }
 
 .dateinpt {
@@ -103,26 +99,21 @@
   width: 100px;
   height: 36px;
   font-family: var(--primary-font);
-
 }
 
 .modal-footer .btn-info {
-
   font-family: var(--primary-font);
 }
 
 /* newtask popup */
 .containerbox {
   padding: 10px 10px;
-
-
 }
 
 .checkbox {
   font-family: var(--primary-font);
   font-size: 13px;
   display: inline-block;
-
 }
 
 .hr {
@@ -167,22 +158,23 @@
 }
 
 .select2-container--default .select2-selection--single {
-
   height: 38px !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   line-height: 34px !important;
-
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   height: 34px !important;
 }
 
 .taskfooter .taskclose {
-  background-color: #1BBDD6;
+  background-color: #1bbdd6;
   font-family: var(--primary-font);
   border-radius: 4px;
   border: none;
@@ -192,7 +184,7 @@
 }
 
 .taskfooter .tasksave {
-  background-color: #1BBDD6;
+  background-color: #1bbdd6;
   font-family: var(--primary-font);
   border-radius: 4px;
   border: none;
@@ -203,22 +195,21 @@
 }
 
 .taskfooter .taskclose:hover {
-  background-color: #17A2B8;
+  background-color: #17a2b8;
 }
 
 .taskfooter .tasksave:hover {
-  background-color: #17A2B8;
+  background-color: #17a2b8;
 }
 
 /*************************invoicepopup**********************************/
 :root {
-  --primary-font: 'Roboto', sans-serif;
-  --newtaskbtn-color: #02A9F0;
+  --primary-font: "Roboto", sans-serif;
+  --newtaskbtn-color: #02a9f0;
 }
 
 @media (max-width: 768px) {
   .new {
-
     width: 90%;
   }
 }
@@ -233,20 +224,17 @@
   font-size: 16px;
   font-family: var(--primary-font);
   color: whitesmoke;
-
-
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
   .invoicehdr {
     padding: none;
   }
 }
 
-@media(min-width:576px) {
+@media (min-width: 576px) {
   .invoicedial {
     max-width: 576px !important;
-
   }
 
   .invoicetitle {
@@ -257,7 +245,6 @@
 .invoicedial {
   width: 400px !important;
   height: 600px;
-
 }
 
 .invoicehdr {
@@ -273,8 +260,6 @@
 .invoicetitle {
   font-size: 17px !important;
 }
-
-
 
 .invoicebody {
   margin-left: 0px !important;
@@ -302,7 +287,7 @@
 }
 
 .modal-footer .invoiceclose {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   font-family: var(--primary-font);
   font-size: 13px !important;
   border: none !important;
@@ -312,7 +297,7 @@
 }
 
 .modal-footer .invoicepct {
-  background-color: #02A9F0;
+  background-color: #02a9f0;
   font-family: var(--primary-font);
   font-size: 13px;
   border: none !important;
@@ -322,11 +307,11 @@
 }
 
 .modal-footer .invoiceclose:hover {
-  background-color: #B5B5B5;
+  background-color: #b5b5b5;
 }
 
 .modal-footer .invoicepct:hover {
-  background-color: #0293D1;
+  background-color: #0293d1;
 }
 
 .textdanger {
@@ -409,7 +394,7 @@
 
 .purchaseinfo {
   margin-top: 3px;
-
+  margin-bottom: 3px;
 }
 
 .personcharge {
@@ -435,9 +420,7 @@
   width: 98px;
   height: 36px;
   font-family: var(--primary-font);
-
 }
-
 
 .select2-container {
   width: 100% !important;
@@ -446,17 +429,18 @@
 }
 
 .select2-container--default .select2-selection--single {
-
   height: 38px !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   line-height: 34px !important;
-
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   height: 34px !important;
 }
 
@@ -475,7 +459,6 @@
 
 .dropdown-menu-right {
   background-color: #fff !important;
-
 }
 
 .circle {
@@ -488,12 +471,11 @@
 }
 
 .editcnfrm {
-  background-color: #83D616;
+  background-color: #83d616;
   border-radius: 4px;
   padding: 3px 3px;
   border: none;
   margin-left: 25px;
-
 }
 
 /* .containerbtn .submenuedit {
@@ -595,9 +577,27 @@
 .discinfo {
   margin-top: 3px;
   margin-left: 4px;
-
 }
 
 .discdesc {
   margin-left: 7px;
+}
+
+label.purchaseinfo.fs-6 {
+  margin-bottom: 23px;
+  margin-top: -1px;
+}
+
+/*  */
+
+.flex.b_f {
+  margin-left: 3px !important;
+}
+
+.cyc_2 {
+  margin-right: -4px;
+}
+
+label.l_mrg {
+  margin-left: 0px !important;
 }

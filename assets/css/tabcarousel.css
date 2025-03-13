@@ -49,6 +49,7 @@ select.form-select option.optvle {
 
   .scroll-images::-webkit-scrollbar {
     -webkit-appearance: none;
+    height: 5px;
   }
 
   .carousel {
@@ -59,7 +60,7 @@ select.form-select option.optvle {
   .tablinks2,
   .tablinks3,
   .tablinks4 {
-    display: flex !important;
+    /* display: flex; */
     width: 100% !important;
     margin: auto;
   }
@@ -76,22 +77,25 @@ select.form-select option.optvle {
 }
 
 .tabresact {
-  border-bottom: 2px solid #405189 !important;
-  color: #405189 !important;
+  border-bottom: 2px solid #02a9f4 !important;
+  color: #02a9f4 !important;
 }
 
 .tablinks.active {
-  border-bottom: 2px solid #405189 !important;
+  /* border-bottom: 2px solid #405189 !important; */
   color: #405189 !important;
+  border-bottom: none !important;
 }
 
 .tablinks:hover {
-  border-bottom: 2px solid #405189 !important;
+  /* border-bottom: 2px solid #02a9f4 !important; */
+  border-bottom: none !important;
 }
 
 .child {
   /* min-width: 130px; */
-  height: 42px;
+  min-width: fit-content;
+  /* height: 42px; */
   margin: 0px 10px;
   overflow: hidden;
   margin-top: 13px;
@@ -102,9 +106,11 @@ select.form-select option.optvle {
 
 .tabcontent {
   display: none;
-  padding: 7px 0px 5px 0px;
+  /* padding: 7px 0px 5px 0px; */
+  padding: 20px 0px 5px 0px;
   background-color: #ffffff !important;
   border-top: none;
+  overflow: hidden;
 }
 
 .slidemt {
@@ -226,7 +232,7 @@ select.form-select option.optvle {
 }
 
 .tab-arrow.rights {
-  right: 0;
+  right: -3px;
 }
 
 /* Show arrows when there is an overflow */
@@ -252,7 +258,7 @@ select.form-select option.optvle {
 }
 
 .desktop {
-  display: none;
+  display: block;
 }
 
 /* 
@@ -269,14 +275,11 @@ select.form-select option.optvle {
   }
 }
 
-@media screen and (min-width: 480px) {
+/* @media screen and (min-width: 480px) { */
+@media screen and (min-width: 300px) {
   .carousel-control-next,
   .carousel-control-prev {
-    display: none;
-  }
-
-  .carousel {
-    display: none;
+    /* display: none; */
   }
 
   /* .tablinks {
@@ -285,15 +288,18 @@ select.form-select option.optvle {
                
             } */
 
-  .desktop {
+  /* .desktop {
     display: block;
-  }
+  } */
 }
 
 /*new tab btns*/
 .proposaltabbtns {
   width: 100%;
   text-align: right;
+}
+.tabbtnwidth::-webkit-scrollbar {
+  height: 5px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -306,15 +312,11 @@ select.form-select option.optvle {
   .protabbtn {
     width: 100%;
   }
-}
-
-.carousel {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .carousel {
-    display: block !important;
+  .coro-prota-btn {
+    width: 25% !important;
+  }
+  .tabbtnwidth .proposaltabbtns {
+    justify-content: flex-start !important;
   }
 }
 
@@ -322,9 +324,11 @@ select.form-select option.optvle {
   display: none;
 }
 
-.carousel {
-  display: none;
-}
+/* @media (max-width: 480px) {
+  .carousel {
+    display: block !important;
+  }
+} */
 
 @media (max-width: 1097px) {
   .propnewtask {
@@ -341,6 +345,15 @@ select.form-select option.optvle {
 @media (max-width: 768px) {
   .Payment-btn {
     margin-top: 0px !important;
+  }
+  .desktop {
+    display: none;
+  }
+  .carousel {
+    display: block;
+  }
+  .tabcontent {
+    padding-top: 0px;
   }
 }
 
@@ -360,17 +373,8 @@ select.form-select option.optvle {
   cursor: pointer;
   margin-right: 15px;
   border: none;
-  align-items: center;
-  justify-content: center;
   outline: none;
   background: white;
-}
-
-.tablinks2 i,
-.tablinks3 i,
-.tablinks4 i {
-  /* color: rgb(152, 63, 253); */
-  color: #405189;
 }
 
 @media (max-width: 768px) {
@@ -378,28 +382,19 @@ select.form-select option.optvle {
     margin-left: 8px;
   }
 }
-
 .tablinks2.active,
 .tablinks3.active,
 .tablinks4.active {
-  /* border-bottom: 2px solid #02a9f4 !important;
-    color: #02a9f4 !important; */
-  /* margin-top: 5px !important; */
-  justify-content: center !important;
-  text-align: center !important;
-  border-radius: 3px !important;
-  /* padding: 5px !important; */
-  border-bottom: none !important;
-  /* color: rgb(152, 63, 253) !important; */
-  color: #405189;
-  background: rgba(216, 216, 216, 0.15) !important;
+  border-bottom: 2px solid #02a9f4 !important;
+  color: #02a9f4 !important;
 }
 
 .tablinks2:hover,
 .tablinks3:hover,
 .tablinks4:hover {
-  /* border-bottom: 2px solid #02a9f4 !important; */
-  /* color: rgb(152, 63, 253) !important; */
-  color: #405189;
-  background: rgba(216, 216, 216, 0.15) !important;
+  border-bottom: 2px solid #02a9f4 !important;
+}
+.tbchld {
+  padding: 0px 5px !important;
+  margin-top: 0px !important;
 }
