@@ -12,9 +12,8 @@
     <link href="<?= base_url() ?>/assets/css/sidebar.css" rel="stylesheet">
 
     <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
 
     <!--jquery-->
     <script type="text/javascript" src="<?= base_url() ?>/assets/js/jquery-3.3.1.js"></script>
@@ -195,101 +194,30 @@
                                     id="example" aria-describedby="example_info">
                                     <thead class="theadrow">
                                         <tr>
-                                            <th><input type="checkbox" id="all_check" onchange="checkAll()"></th>
                                             <th>
-                                                Order Type Title
+                                                Name
                                             </th>
                                             <th>
-                                                Status
+                                                Age
                                             </th>
                                             <th>
-                                                Preffered Module
+                                                unit
                                             </th>
                                             <th>
-                                                Module Head
+                                                tax
+                                            </th>
+                                            <th>
+                                                tax new
+                                            </th>
+                                            <th>
+                                                Action
+                                            </th>
+                                            <th>
+                                                status
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody class="index3_body">
-                                        <tr class="row-hover">
-                                            <td class="progtble"><input type="checkbox"
-                                                    onchange="toggleRowBackground(this)" class="single_check"
-                                                    onclick=" singleCheck()"></td>
-
-                                            <td class="hrtble1 index3_row1"><a href="#" class="">
-                                                    <span class="viewbtn">GHS</span></a>
-
-                                                <p class="header-effect index3_editbtn">
-
-                                                    <a onclick="toggleViews(1)" data-bs-toggle="tooltip"
-                                                        data-placement="bottom" data-bs-title="view"
-                                                        data-bs-auto-close="outside">
-                                                        <img src="assets/img/view.svg" height="15px" width="15px"
-                                                            alt="">
-                                                    </a>
-
-                                                    <a onclick="showModal('add.html','Edit Order Status')"
-                                                        data-bs-toggle="tooltip" data-bs-title="edit"
-                                                        data-bs-auto-close="outside">
-                                                        <img src="assets/img/edit.svg" height="15px" width="15px"
-                                                            alt="">
-                                                    </a>
-
-
-                                                    <a href="sales_invoice_edit.html" data-bs-toggle="tooltip"
-                                                        data-bs-title="delete" data-bs-auto-close="outside">
-                                                        <img src="assets/img/delete.svg" height="15px" width="15px"
-                                                            alt="">
-                                                    </a>
-
-                                                </p>
-
-                                            </td>
-                                            <td><label class="switchslider"> <input type="checkbox" checked><span
-                                                        class="slider round"></span></label></td>
-                                            <td>Purchase Request</td>
-                                            <td>Anna , Besant</td>
-                                        </tr>
-
-                                        <tr class="row-hover">
-                                            <td class="progtble"><input type="checkbox"
-                                                    onchange="toggleRowBackground(this)" class="single_check"
-                                                    onclick=" singleCheck()"></td>
-
-                                            <td class="hrtble1 index3_row1"><a href="#" class="">
-                                                    <span class="viewbtn">GHS</span></a>
-
-                                                <p class="header-effect index3_editbtn">
-
-                                                    <a onclick="toggleViews(1)" data-bs-toggle="tooltip"
-                                                        data-placement="bottom" data-bs-title="view"
-                                                        data-bs-auto-close="outside">
-                                                        <img src="assets/img/view.svg" height="15px" width="15px"
-                                                            alt="">
-                                                    </a>
-
-                                                    <a onclick="showModal('add.html','Edit Order Status')"
-                                                        data-bs-toggle="tooltip" data-bs-title="edit"
-                                                        data-bs-auto-close="outside">
-                                                        <img src="assets/img/edit.svg" height="15px" width="15px"
-                                                            alt="">
-                                                        </a>
-
-
-                                                        <a href="sales_invoice_edit.html" data-bs-toggle="tooltip"
-                                                            data-bs-title="delete" data-bs-auto-close="outside">
-                                                            <img src="assets/img/delete.svg" height="15px" width="15px"
-                                                                alt="">
-                                                        </a>
-
-                                                </p>
-
-                                            </td>
-                                            <td><label class="switchslider"> <input type="checkbox" checked><span
-                                                        class="slider round"></span></label></td>
-                                            <td>Purchase Order</td>
-                                            <td>Anna , Besant</td>
-                                        </tr>
+                                    <tbody id="sales-table">
 
                                     </tbody>
                                 </table>
@@ -1283,4 +1211,5 @@ $("#first_col").show();
         });
     </script>
 </body>
+
 </html>

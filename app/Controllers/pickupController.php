@@ -9,7 +9,7 @@ class PickupController extends BaseController
     public function __construct()
     {
         $this->db = \Config\Database::connect();
-        $this->pickups = $this->db->table('pickups');
+        $this->pickup = $this->db->table('pickup');
     }
     public function pickIndex()
     {
@@ -24,7 +24,7 @@ class PickupController extends BaseController
     public function pickSave()
     {
         $input = $this->request->getVar();
-        $result = $this->pickups->insert($input);
+        $result = $this->pickup->insert($input);
         return json_encode($result);
     }
 
