@@ -74,6 +74,7 @@ class PickupController extends BaseController
             <td>' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
             <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
+            <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>
             </tr>';
             $id++;
@@ -91,6 +92,15 @@ class PickupController extends BaseController
         $input = $this->request->getPost();
         $result = $this->pickup->where('id', $id)->update($input);
         return json_encode($result);
-
+    }
+    public function pickDelete($id)
+    {
+        $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
+        return view('pickup/delModal',  $data);
+    }
+    public function pickDelData($id)
+    {
+        $result = $this->pickup->where('id', $id)->delete();
+        return json_encode($result);
     }
 }

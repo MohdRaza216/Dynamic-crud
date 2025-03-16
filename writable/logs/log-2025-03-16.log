@@ -490,3 +490,14 @@ in SYSTEMPATH\Common.php on line 1161.
  5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-16 09:33:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You must use the "set" method to update an entry.
+[Method: POST, Route: updatePickup/5]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2575.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2495): CodeIgniter\Database\BaseBuilder->validateUpdate()
+ 2 APPPATH\Controllers\pickupController.php(93): CodeIgniter\Database\BaseBuilder->update([])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickUpdate('5')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
