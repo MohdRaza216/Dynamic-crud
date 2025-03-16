@@ -1,0 +1,50 @@
+CRITICAL - 2025-03-15 06:09:14 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 31.
+ 1 APPPATH\Views\pickup\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-15 06:16:48 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: pickup]
+in APPPATH\Views\pickup\index.php on line 31.
+ 1 APPPATH\Views\pickup\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/index', [], true)
+ 5 APPPATH\Controllers\pickupController.php(16): view('pickup/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-15 07:04:14 --> CodeIgniter\Database\Exceptions\DatabaseException: You must use the "set" method to insert an entry.
+[Method: POST, Route: savePickup]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2387.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2327): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Controllers\pickupController.php(29): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickSave()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-15 07:10:52 --> CodeIgniter\Database\Exceptions\DatabaseException: You must use the "set" method to insert an entry.
+[Method: POST, Route: savePickup]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2387.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2327): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Controllers\pickupController.php(29): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickSave()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

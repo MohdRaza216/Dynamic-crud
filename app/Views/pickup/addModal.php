@@ -61,6 +61,7 @@
                     dataType: 'json',
                     success: function(result) {
                         toastr.success('Added successfully', 'Success');
+                        getUsers();
                         $('#modal_md').modal('hide');
                     }
                 });

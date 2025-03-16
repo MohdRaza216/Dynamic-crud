@@ -5,145 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="<?= base_url('uploads/company_logo/favicon.png') ?>">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/salesqueen_logo.jpeg" type="image/x-icon">
 
-    <!-- Side bar -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    <!-- Stylesheets -->
     <link href="<?= base_url() ?>/assets/css/sidebar.css" rel="stylesheet">
-
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
-
-    <!--jquery-->
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/jquery-3.3.1.js"></script>
-
-    <!--moment js-->
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/moment.js"></script>
-
-    <!--Bootstrap 5 CSS--->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/Bootstrap5/css/bootstrap.min.css">
-
-    <!--Bootstrap Icons-->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-
-    <!--Bootstrap 5 JS--->
-    <script type="text/javascript" src="<?= base_url() ?>/assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
-
-    <!--datatables CSS--->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/datatables/css/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/datatables/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/datatables/css/buttons.dataTables.min.css">
-
-    <!-- drag -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
-
-    <!--Datatables js-->
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/dataTables.responsive.min.js"></script>
-
-    <!--Datatable dropdown----->
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/datatables.pdfmake.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/datatables.vfs_fonts.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/datatables.jszip.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/assets/js/buttons.print.min.js"></script>
-
-    <!--Dropdown select-->
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/datatables.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/bootstrap-select.min.css">
-    <script src="<?= base_url() ?>/assets/Bootstrap5/js/bootstrap-select.min.js"></script>
-
-    <!-- Toastr -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/toastr.min.css">
-    <script src="<?= base_url() ?>/assets/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/select2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/datepicker/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/jquery-confirm/jquery-confirm.min.css">
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/daterangepicker.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/file_upload/file_upload_style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/CRM.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/payroll/deduction.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/payroll/newpayroll.css">
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css">
+    <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
-    <!--form validation files-->
+    <!-- JavaScript Libraries -->
+    <script src="<?= base_url() ?>/assets/js/jquery-3.3.1.js"></script>
+    <script src="<?= base_url() ?>/assets/js/moment.js"></script>
+    <script src="<?= base_url() ?>/assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/dataTables.buttons.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/datatables.jszip.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/buttons.html5.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/buttons.print.min.js"></script>
+    <script src="<?= base_url() ?>/assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/toastr.min.js"></script>
     <script src="<?= base_url() ?>/assets/js/formValidation.min.js"></script>
     <script src="<?= base_url() ?>/assets/js/bootstrap_validation.min.js"></script>
-
-    <!--Dropdown select-->
-
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/select2.min.css">
     <script src="<?= base_url() ?>/assets/Bootstrap5/js/select2.min.js"></script>
-
-    <!--summernote-->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-
-    <!-- datepicker -->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/datepicker/bootstrap-datepicker.standalone.min.css">
     <script src="<?= base_url() ?>/assets/datepicker/bootstrap-datepicker.min.js"></script>
-
-    <!-- jquery confirm -->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/jquery-confirm/jquery-confirm.min.css">
     <script src="<?= base_url() ?>/assets/jquery-confirm/jquery-confirm.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
-    <!--<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>-->
-    <!--<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />-->
-
-    <!--main style css-->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
-
-    <!-- this is for journal entry  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
     <script src="https://jsuites.net/v4/jsuites.js"></script>
-    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
-    <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
-    <!-- this is for journal entry  -->
-
-    <!-- ctrl+v dropzone -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js" type="text/javascript"></script>
-
-    <!--date range picker-->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/daterangepicker.css">
     <script src="<?= base_url() ?>/assets/js/daterangepicker.min.js"></script>
-
-    <!--new file upload-->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/file_upload/file_upload_style.css">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
-
-    <!-- Include Date Range Picker -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-    <!--Sidebar-->
     <script src="<?= base_url() ?>/assets/js/nav_notification.js"></script>
     <script src="<?= base_url() ?>/assets/js/nav_script.js"></script>
-    <!--image navbar-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css" />
 
-
-    <!--tab/accordion-->
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/activity.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/tab.css">
-
-    <!-- CRM -->
-    <link href="<?= base_url() ?>/assets/css/CRM.css" rel="stylesheet">
-    <!-- Include ApexCharts library -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
-    <!--payroll-->
-    <!--<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/employee.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/advance.css">-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/deduction.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/newpayroll.css">
-
-    <!--<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/payrun.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/payroll/setting.css">-->
-
-
-
-    <!-- barchart script cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
         .help-block {
             margin-left: 10px;
@@ -156,76 +84,74 @@
 
         .tag {
             font-size: 0.75em !important;
-            border-width: 1px !important;
-            border-style: solid !important;
-            border-color: rgb(196, 200, 203) !important;
-            border-image: initial !important;
+            border: 1px solid rgb(196, 200, 203) !important;
             padding: 0.25em 0.4em !important;
             border-radius: 6px !important;
             margin: 0.2em !important;
-
         }
     </style>
-
 </head>
 
 <body>
-    <div class="tblcontainer1 container-fluid">
-        <div class="row interview_page">
+<div class="tblcontainer1 container-fluid">
+        <div class="row">
             <div class="col-md-10 qarow">
                 <h5>USER DATA</h5>
             </div>
             <div class="col-md-2">
-                <button type="button" class="hrbtns contractbtn pull-right"
-                    onclick="showComModal(`<?= base_url('addModal') ?>`,`Add pickup`)">
+                <button type="button" class="hrbtns contractbtn pull-right" onclick="showComModal(`<?= base_url('addModal') ?>`,`Add pickup`)">
                     <i class="fa-solid fa-plus "></i> ADD USER</button>
             </div>
         </div>
 
-        <div class="row interview_page">
-            <div class=" card col-md-12 me-3" id="first_col">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12" id="first_col">
-                            <div class="demo-html mt-0 interview_index_">
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="demo-html mt-0">
+                    <table class="example display dataTable display responsive nowrap tblalign table borderless" style="width: 100%" aria-describedby="example_info">
+                        <thead class="theadrow">
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Age
+                                </th>
+                                
+                            </tr>
+                        </thead>
 
-                                <table
-                                    class="example display dataTable display responsive nowrap tblalign table borderless index3_page"
-                                    id="example" aria-describedby="example_info">
-                                    <thead class="theadrow">
-                                        <tr>
-                                            <th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                Age
-                                            </th>
-                                            <th>
-                                                unit
-                                            </th>
-                                            <th>
-                                                tax
-                                            </th>
-                                            <th>
-                                                tax new
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                            <th>
-                                                status
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="sales-table">
+                        <tbody id="sales-table">
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                        </tbody>
+
+                    </table>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div id="modal_md" class="modal fade custom-content" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header hdrbg">
+                    <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                    <!-- <h5 class="modal-title"></h5> -->
+                    <h5 class="fnt_head">
+
+                        <b class="modal-title popuphead"></b>
+                        <div class="vertical-line">
+                            <span class="Bcgtop capsule"></span>
+                            <span class="Bcgbttm capsule"></span>
+                        </div>
+                    </h5>
+                </div>
+                <div class="modal-body mbdclr">
+                </div>
+            </div>
+        </div>
+    </div>
+
 
             <!----view toggle-->
             <div id="sec_col" class="col-md-6 exptblecol sec-column tablesideopenermt-3 p-2">
@@ -382,7 +308,7 @@
 
     <!-- modal-->
     <div class="modal fade" id="modal_md" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-l">
             <div class="modal-content modal-width">
                 <div class="modal-header hdrbg">
                     <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
@@ -749,28 +675,6 @@ openTab(null, 'Tab1');
         })
     </script>
 
-    <script>
-        $(document).ready(function () {
-            const td = document.querySelector('table.dataTable.display tbody tr td');
-            const table = document.querySelector('table.dataTable.display');
-            // const options = document.querySelectorAll('.dataTables_wrapper .dataTables_length select option');
-            if ($('table.dataTable.display tbody tr').length < 2) {
-                if (td.innerHTML == 'No data available in table') {
-                    table.insertAdjacentHTML('afterend', `<div style="width:100%;display:flex;justify-content:center"> <img src="assets\img\page404.png" height="500vmin" width="500vmin"
-alt="three-dots" data-bs-toggle="tooltip" data-bs-title="more"
-data-bs-auto-close="outside"> </div>`)
-                }
-            }
-
-            // options.forEach((option) => {
-            // console.log(option);
-            // option.addEventListener('click', () => {
-            // alert('hi')
-            // option.style.color = 'red !important';
-            // })
-            // })
-        });
-    </script>
 
 
 
@@ -1070,96 +974,6 @@ $("#first_col").show();
         }
     </script>
     <script>
-        $(document).ready(function () {
-            var table = $("#measure-table").DataTable({
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
-                language: {
-                    lengthMenu: '_MENU_',
-                    search: '',
-                    searchPlaceholder: " Search for order ID, customer, order status or something...",
-                    className: 'px-3'
-                },
-                responsive: true,
-                dom: 'Blfrtip',
-                pageLength: 50,
-                buttons: [{
-
-                },
-
-                // {
-                //   text: '<i class="fa-solid fa-arrow-rotate-right p-1" style="font-size:.9rem"></i>'
-                // },
-
-                {
-                    text: '<i class="fa-solid fa-arrow-right-from-bracket"></i> EXPORT',
-                    extend: 'collection',
-                    buttons: [
-                        // '<span class="fexport"><i class="fa-regular fa-file-excel icn me-2"></i> EXCEL</span>', '<span class="fexport"><i class="fa-regular fa-file-lines icn me-2"></i> CSV</span>', '<span class="fexport"><i class="fa-regular fa-file-pdf icn me-2"></i> PDF</span>', '<span class="fexport"><i class="fa-solid fa-print me-2 icn"></i> PRINT</span>'
-                        {},
-                        {
-                            text: '<i class="fa-regular fa-file-excel icn me-2 excel-icon"></i> Excel',
-                            extend: 'excel',
-
-                        },
-                        {
-                            text: '<i class="fa-regular fa-file-lines icn me-2 csv-icon"></i> CSV',
-                            extend: 'csv',
-                        },
-                        {
-                            text: '<i class="fa-regular fa-file-pdf icn me-2 pdf-icon"></i> PDF',
-                            extend: 'pdf'
-                        },
-                        {
-                            text: '<i class="fa-solid fa-print me-2 icn print-icon"></i> PRINT',
-                            extend: 'print'
-                        },
-                    ],
-                    className: 'px-3'
-
-                }
-                ],
-                initComplete: function () {
-                    // Add the id and other attributes to the search input
-                    var searchInput = $('.dataTables_filter input');
-                    searchInput.attr('id', 'tablesearchinput');
-                    searchInput.attr('data-bs-toggle', 'tooltip');
-                    searchInput.attr('data-placement', 'bottom');
-                    searchInput.attr('data-bs-title', '(CTRL+F)');
-                    searchInput.attr('data-bs-auto-close', 'outside');
-                    searchInput.attr('id', 'searchtooltip');
-
-                    // Initialize tooltip
-                    new bootstrap.Tooltip(searchInput[0]);
-
-
-                    // Hide the tooltip on focus or click
-                    searchInput.on('input', function () {
-                        bootstrap.Tooltip.getInstance(this).hide();
-                    });
-                }
-            });
-        }
-
-        );
-    </script>
-    <script>
-        function getAmountByReferenceCode() {
-            var referenceCode = document.getElementById('referred_by').value;
-
-            fetch('tableStore' + referenceCode)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('amount').value = data.amount;
-                    document.getElementById('wallet').innerText = data.amount;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
-    </script>
-    <script>
         function getUsers() {
             $.ajax({
                 type: 'POST',
@@ -1204,7 +1018,7 @@ $("#first_col").show();
                     dataType: 'json',
                     success: function (result) {
                         toastr.success('updated successfully', 'Success');
-                        getUsers()
+                        getUsers();
                     }
                 });
             });

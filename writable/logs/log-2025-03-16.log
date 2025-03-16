@@ -1,0 +1,30 @@
+CRITICAL - 2025-03-16 03:50:29 --> ErrorException: Undefined property: stdClass::$active
+[Method: GET, Route: fetchPick]
+in APPPATH\Controllers\pickupController.php on line 89.
+ 1 APPPATH\Controllers\pickupController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$active', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickTable()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-16 03:56:07 --> ErrorException: Undefined property: stdClass::$active
+[Method: GET, Route: fetchPick]
+in APPPATH\Controllers\pickupController.php on line 89.
+ 1 APPPATH\Controllers\pickupController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$active', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickTable()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-16 05:38:17 --> ErrorException: Undefined property: stdClass::$active
+[Method: POST, Route: fetchPick]
+in APPPATH\Controllers\pickupController.php on line 89.
+ 1 APPPATH\Controllers\pickupController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$active', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickTable()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

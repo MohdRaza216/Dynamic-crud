@@ -7,5 +7,5 @@ class PickupModel extends Model
 {
     protected $table = 'pickup';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['order_type_title', 'status', 'assigned_to', 'created_at'];
+    protected $allowedFields = ['Fname', 'Fage'];
 }
