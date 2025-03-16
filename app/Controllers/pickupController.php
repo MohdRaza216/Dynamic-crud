@@ -73,6 +73,7 @@ class PickupController extends BaseController
             <tr>
             <td>' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
+            <td>' . $row->unit . '</td>
             <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
             <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>

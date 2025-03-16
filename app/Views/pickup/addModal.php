@@ -16,6 +16,17 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchasegrp mb-1" for="unit">Unit</label>
+                <select class="selectpicker form-control" name="unit" placeholder="Select Unit">
+                    <option value="inch" selected>inch</option>
+                    <option value="cm">cm</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 blkftr">
             <div class="modal-footer taskfooter">
                 <button type="button" class="taskclose1" data-bs-dismiss="modal">
