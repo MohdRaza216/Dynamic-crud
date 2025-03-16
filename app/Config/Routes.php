@@ -12,3 +12,5 @@ $routes->get('db-check', 'PickupController::checkDatabase');
 $routes->post('savePickup', 'PickupController::pickSave');
 $routes->get('fetchUserData', 'PickupController::fetchData');
 $routes->post('fetchPick', 'PickupController::pickTable');
+$routes->get('editPickup/(:num)', 'PickupController::pickEdit/$1');
+$routes->post('updatePickup/(:num)', 'PickupController::pickUpdate/$1');

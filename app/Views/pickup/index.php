@@ -116,7 +116,9 @@
                                 <th>
                                     Age
                                 </th>
-                                
+                                <th>
+                                    Action
+                                </th>
                             </tr>
                         </thead>
 

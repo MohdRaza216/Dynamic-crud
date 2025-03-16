@@ -23,39 +23,36 @@ class PickupController extends BaseController
     }
 
     public function pickSave()
-{
-    // Fetch form data (use getPost instead of getVar for security)
-    $input = $this->request->getVar();
+    {
+        // Fetch form data
+        $input = $this->request->getPost();
 
-    // Debug: Log received data
-    log_message('debug', 'Received Data: ' . json_encode($input));
+        // Validate required fields
+        if (!isset($input['Fname']) || !isset($input['Fage'])) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Missing required fields!',
+                'received_data' => $input // Debugging output
+            ]);
+        }
+        $result = $this->pickup->insert($input);
+        return json_encode($result);
 
-    // Validate required fields
-    if (!isset($input['Fname']) || !isset($input['Fage'])) {
-        return $this->response->setJSON([
-            'success' => false,
-            'message' => 'Missing required fields!',
-            'received_data' => $input // Debugging output
-        ]);
     }
-    $result = $this->pickup->insert($input);
-    return json_encode($result);
-
-}
 
 
 
 
-public function checkDatabase()
-{
-    try {
-        $db = \Config\Database::connect();
-        $db->query("SELECT 1"); // Execute a simple query to check connection
-        echo "Database is connected successfully!";
-    } catch (\Exception $e) {
-        echo "Database connection failed: " . $e->getMessage();
+    public function checkDatabase()
+    {
+        try {
+            $db = \Config\Database::connect();
+            $db->query("SELECT 1"); // Execute a simple query to check connection
+            echo "Database is connected successfully!";
+        } catch (\Exception $e) {
+            echo "Database connection failed: " . $e->getMessage();
+        }
     }
-}
 
 
     public function fetchData()
@@ -76,9 +73,24 @@ public function checkDatabase()
             <tr>
             <td>' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
+            <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
+            </td>
             </tr>';
             $id++;
+        }
+        return json_encode($table);
     }
-    return json_encode($table);
-}
+    public function pickEdit($id)
+    {
+        $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
+        return view('pickup/editModal',  $data);
+    }
+    public function pickUpdate($id)
+    {
+        // Fetch form data (use getPost instead of getVar for security)
+        $input = $this->request->getPost();
+        $result = $this->pickup->where('id', $id)->update($input);
+        return json_encode($result);
+
+    }
 }
