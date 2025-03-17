@@ -131,6 +131,9 @@
                                 <th>
                                     Action
                                 </th>
+                                <th>
+                                    status
+                                </th>
                             </tr>
                         </thead>
 

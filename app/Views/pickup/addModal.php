@@ -68,6 +68,17 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-4">
+            <div class="purchasegrp">
+                <label class="purchaseinfo mb-1">Status</label><br>
+                <label class="switchslider">
+                    <input type="checkbox" name="status" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 blkftr">
             <div class="modal-footer taskfooter">
                 <button type="button" class="taskclose1" data-bs-dismiss="modal">

@@ -38,6 +38,8 @@ class PickupController extends BaseController
             unset($input['file']);
         }
         $input['tax_new'] = isset($input['tax_new']) ? implode(',', $input['tax_new']) : '';
+        $input['status'] = isset($input['status']) ? 1 : 0;
+
         $result = $this->pickup->insert($input);
         return json_encode($result);
 
@@ -86,6 +88,8 @@ class PickupController extends BaseController
                 }
             }
 
+            $checked = $row->status == 1 ? 'checked' : '';
+
             $table .= '
             <tr>
             <td><img src="' . $profileImage . '" class="staff-profile-image-small"> ' . $row->Fname . '</td>
@@ -96,6 +100,10 @@ class PickupController extends BaseController
             <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
             <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>
+            <td><label class="switchslider">
+                        <input type="checkbox" class="myButton earningsstatus-toggle" class=" myButton earningsstatus-toggle" data-earningsid="' . $row->id . '" ' . $checked . ' />
+                        <span class="slider round"></span>
+                    </label></td>
             </tr>';
             $id++;
         }
@@ -120,6 +128,7 @@ class PickupController extends BaseController
             unset($input['file']);
         }
         $input['tax_new'] = isset($input['tax_new']) ? implode(',', $input['tax_new']) : '';
+        $input['status'] = isset($input['status']) ? 1 : 0;
         $result = $this->pickup->where('id', $id)->update($input);
         return json_encode($result);
     }
@@ -143,5 +152,13 @@ class PickupController extends BaseController
         } else {
             return $this->response->setJSON(['error' => 'Failed to delete the file'])->setStatusCode(500);
         }
+    }
+    public function pickupStatus(){
+        $EarningTypeid = $this->request->getPost('earningTypeId');
+        $newStatus = $this->request->getPost('newStatus');
+
+        $this->pickup->set('status', $newStatus)->where('id', $EarningTypeid)->update();
+        $result = 1;
+        return json_encode($result);
     }
 }

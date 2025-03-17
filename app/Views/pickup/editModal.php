@@ -86,6 +86,14 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-4">
+            <div class="purchasegrp">
+                <label class="purchaseinfo mb-1">Status</label><br>
+                <label class="switchslider"> <input type="checkbox" name="status" <?= ($edit->status == 1) ? "checked" : "" ?>><span class="slider round"></span></label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 blkftr">
             <div class="modal-footer taskfooter">
                 <button type="button" class="taskclose1" data-bs-dismiss="modal">
@@ -107,8 +115,7 @@
                 file_location: fileLocation
             },
             success: function (response) {
-                // toastr.success(' file deleted  Successfully!', 'Success');
-                toastr('success', 'file deleted  Successfully!');
+                toastr.success(' file deleted  Successfully!', 'Success');
                 $('.file-block').remove();
                 var fileIconElement = document.querySelector('.file-icon');
                 var fileNameElement = document.querySelector('.file-name');
