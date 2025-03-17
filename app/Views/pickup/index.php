@@ -997,7 +997,6 @@ $("#first_col").show();
                 url: '<?= base_url() ?>/fetchPick',
                 dataType: 'json',
                 success: function (table) {
-                    console.log(table);
                     $('#sales-table').html(table);
                 }
             });
