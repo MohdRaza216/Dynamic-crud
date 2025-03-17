@@ -20,7 +20,7 @@ class PickupController extends BaseController
 
     public function pickAdd()
     {
-        $data['tax'] = $this->tax->where('status',1)->get()->getResult();
+        $data['tax'] = $this->tax->where('status', 1)->get()->getResult();
         return view('pickup/addModal', $data);
     }
 
@@ -29,21 +29,18 @@ class PickupController extends BaseController
         // Fetch form data
         $input = $this->request->getPost();
 
-        // Validate required fields
-        if (!isset($input['Fname']) || !isset($input['Fage'])) {
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => 'Missing required fields!',
-                'received_data' => $input // Debugging output
-            ]);
+        $file = $this->request->getFile('file');
+        if (!empty($file) && $file->isValid()) {
+            $file->move('uploads/pickup');
+            $input['file_name'] = $file->getName();
+            $input['file_location'] = 'uploads/pickup/' . $file->getName();
+        } else {
+            unset($input['file']);
         }
         $result = $this->pickup->insert($input);
         return json_encode($result);
 
     }
-
-
-
 
     public function checkDatabase()
     {
@@ -71,6 +68,8 @@ class PickupController extends BaseController
         $table = '';
         $id = 1;
         foreach ($data as $row) {
+            $profileImage = !empty($row->file_location) ? base_url($row->file_location) : base_url('assets/img/user.png');
+
             $taxs = $this->tax->where('id', $row->tax)->get()->getRow();
 
             if ($taxs) {
@@ -79,7 +78,7 @@ class PickupController extends BaseController
 
             $table .= '
             <tr>
-            <td>' . $row->Fname . '</td>
+            <td><img src="' . $profileImage . '" class="staff-profile-image-small"> ' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
             <td>' . $row->unit . '</td>
             <td>' . $row->tax . '</td>
@@ -94,24 +93,43 @@ class PickupController extends BaseController
     public function pickEdit($id)
     {
         $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
-        $data['tax'] = $this->tax->where('status',1)->get()->getResult();
-        return view('pickup/editModal',  $data);
+        $data['tax'] = $this->tax->where('status', 1)->get()->getResult();
+        return view('pickup/editModal', $data);
     }
     public function pickUpdate($id)
     {
         // Fetch form data (use getPost instead of getVar for security)
         $input = $this->request->getPost();
+        $file = $this->request->getFile('file');
+        if (!empty($file) && $file->isValid()) {
+            $file->move('uploads/pickup');
+            $input['file_name'] = $file->getName();
+            $input['file_location'] = 'uploads/pickup/' . $file->getName();
+        } else {
+            unset($input['file']);
+        }
         $result = $this->pickup->where('id', $id)->update($input);
         return json_encode($result);
     }
     public function pickDelete($id)
     {
         $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
-        return view('pickup/delModal',  $data);
+        return view('pickup/delModal', $data);
     }
     public function pickDelData($id)
     {
         $result = $this->pickup->where('id', $id)->delete();
         return json_encode($result);
+    }
+    public function removeFile()
+    {
+        $fileLocation = $this->request->getPost('file_location');
+        if (unlink($fileLocation)) {
+            if ($this->pickup->update(['file_location' => null, 'file_name' => null], ['file_location' => $fileLocation])) {
+                return $this->response->setJSON(['message' => 'File deleted successfully'])->setStatusCode(200);
+            }
+        } else {
+            return $this->response->setJSON(['error' => 'Failed to delete the file'])->setStatusCode(500);
+        }
     }
 }

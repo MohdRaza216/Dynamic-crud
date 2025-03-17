@@ -20,9 +20,9 @@
             <div class="purchasegrp">
                 <label class="purchasegrp mb-1" for="unit">Unit</label>
                 <select class="selectpicker form-control" name="unit" placeholder="Select Unit">
-                    <option value="inch" <?= ($edit->unit == "inch") ? "selected" : "" ?> >inch</option>
-                    <option value="cm" <?= ($edit->unit == "cm") ? "selected" : "" ?> >cm</option>
-                    </select>
+                    <option value="inch" <?= ($edit->unit == "inch") ? "selected" : "" ?>>inch</option>
+                    <option value="cm" <?= ($edit->unit == "cm") ? "selected" : "" ?>>cm</option>
+                </select>
             </div>
         </div>
     </div>
@@ -31,12 +31,40 @@
             <div class="purchasegrp">
                 <label class="purchasegrp mb-1" for="tax">tax</label>
                 <select class="selectpicker form-control" name="tax" placeholder="Select tax">
-                    <?php foreach ($tax as $row) : ?>
+                    <?php foreach ($tax as $row): ?>
                         <option value="<?= $row->id ?>" <?= ($edit->tax == $row->id) ? "selected" : "" ?>>
                             <?= ucfirst($row->name) ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp my-0">
+                <label for="subject" class="purchaseinfo mb-1">Image
+                    Upload</label>
+                <input type="file" name="file" id="files" class="form-control purchaseselects upf fleinpt"
+                    accept=".png, .jpg, .jpeg, .gif">
+                <?php if (!empty($edit->file_location)): ?>
+                    <div class="file-info">
+
+                        <span class="file-name">
+                            <span class="material-icons-outlined file-icon">description</span>
+                            <a id="fileLink" href="<?= site_url($edit->file_location) ?>" class="text-decoration-none"
+                                style="margin-top:10px !important;font-size:12px" download
+                                aria-label="Download <?= $edit->file_name ?>"><?= $edit->file_name ?></a>
+                        </span>
+                        <span class="file-size badge rounded-pill"></span>
+                        <button type="button" class="material-icons remove-file-icon btn btn-link p-0"
+                            onclick="deleteFile('<?= $edit->file_location ?>')"
+                            onKeyPress="if(event.key === 'Enter') deleteFile('<?= $edit->file_location ?>')"
+                            aria-label="Delete file" style="margin-bottom:-10px;">delete</button>
+                        <div class="progress-bar" style="width: 0; height: 5px; bottom: 0; position: absolute;">
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -52,27 +80,62 @@
     </div>
 </form>
 <script>
-    $(document).ready(function() {
+    function deleteFile(fileLocation) {
+
+
+        $.ajax({
+            url: '<?= base_url() ?>/removeFile',
+            type: 'POST',
+            data: {
+                file_location: fileLocation
+            },
+            success: function (response) {
+                // toastr.success(' file deleted  Successfully!', 'Success');
+                toastr('success', 'file deleted  Successfully!');
+                $('.file-block').remove();
+                var fileIconElement = document.querySelector('.file-icon');
+                var fileNameElement = document.querySelector('.file-name');
+                var fileRemoveElement = document.querySelector('.remove-file-icon');
+                if (fileNameElement) {
+                    fileNameElement.textContent = '';
+                }
+                if (fileIconElement) {
+                    fileIconElement.textContent = '';
+                }
+                if (fileRemoveElement) {
+                    fileRemoveElement.textContent = '';
+                }
+            },
+            error: function (xhr, status, error) {
+                // Handle error
+                console.error(error);
+                alert('An error occurred while deleting the file.');
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function () {
         $('#pickAdd').formValidation({
-                framework: 'bootstrap',
-                fields: {
-                    Fname: {
-                        validators: {
-                            notEmpty: {
-                                message: 'This field is required'
-                            },
-                        }
-                    },
-                    Fage: {
-                        validators: {
-                            notEmpty: {
-                                message: 'This field is required'
-                            },
-                        }
+            framework: 'bootstrap',
+            fields: {
+                Fname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },
+                Fage: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
                     }
                 }
-            })
-            .on('success.form.fv', function(e) {
+            }
+        })
+            .on('success.form.fv', function (e) {
                 e.preventDefault();
                 var form = document.querySelector('#pickAdd');
                 var dataForm = new FormData(form);
@@ -84,7 +147,7 @@
                     contentType: false,
                     processData: false,
                     dataType: 'json',
-                    success: function(result) {
+                    success: function (result) {
                         toastr.success('Updated successfully', 'Success');
                         getUsers();
                         $('#modal_md').modal('hide');

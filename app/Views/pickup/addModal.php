@@ -31,12 +31,22 @@
             <div class="purchasegrp">
                 <label class="purchasegrp mb-1" for="tax">tax</label>
                 <select class="selectpicker form-control" name="tax" placeholder="Select tax">
-                    <?php foreach ($tax as $row) : ?>
+                    <?php foreach ($tax as $row): ?>
                         <option value="<?= $row->id ?>">
                             <?= ucfirst($row->name) ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp my-0">
+                <label for="subject" class="purchaseinfo mb-1">Image
+                    Upload</label>
+                <input type="file" name="file" id="files" class="form-control purchaseselects upf fleinpt"
+                    accept=".png, .jpg, .jpeg, .gif">
             </div>
         </div>
     </div>

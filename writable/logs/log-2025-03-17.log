@@ -138,3 +138,36 @@ in APPPATH\Views\pickup\editModal.php on line 34.
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 08:46:26 --> ErrorException: unlink(uploads/pickup/SVG.png): No such file or directory
+[Method: POST, Route: removeFile]
+in APPPATH\Controllers\pickupController.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/pickup/SVG.png): No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 119)
+ 2 APPPATH\Controllers\pickupController.php(119): unlink('uploads/pickup/SVG.png')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->removeFile()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 08:48:01 --> ErrorException: unlink(uploads/pickup/YCDirectory.png): No such file or directory
+[Method: POST, Route: removeFile]
+in APPPATH\Controllers\pickupController.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/pickup/YCDirectory.png): No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 119)
+ 2 APPPATH\Controllers\pickupController.php(119): unlink('uploads/pickup/YCDirectory.png')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->removeFile()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 09:07:24 --> ErrorException: unlink(uploads/pickup/YCDirectory.png): No such file or directory
+[Method: POST, Route: removeFile]
+in APPPATH\Controllers\pickupController.php on line 127.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/pickup/YCDirectory.png): No such file or directory', 'C:\\xampp\\htdocs\\myapp\\app\\Controllers\\pickupController.php', 127)
+ 2 APPPATH\Controllers\pickupController.php(127): unlink('uploads/pickup/YCDirectory.png')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->removeFile()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

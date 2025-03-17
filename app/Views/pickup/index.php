@@ -22,7 +22,6 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/datatables.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/datatables/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/Bootstrap5/css/bootstrap-select.min.css">

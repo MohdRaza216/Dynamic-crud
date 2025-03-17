@@ -16,3 +16,4 @@ $routes->get('editPickup/(:num)', 'PickupController::pickEdit/$1');
 $routes->post('updatePickup/(:num)', 'PickupController::pickUpdate/$1');
 $routes->get('deletePickup/(:num)', 'PickupController::pickDelete/$1');
 $routes->post('delPickup/(:num)', 'PickupController::pickDelData/$1');
+$routes->post('removeFile', 'PickupController::removeFile');
