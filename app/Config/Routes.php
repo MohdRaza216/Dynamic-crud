@@ -18,3 +18,4 @@ $routes->get('deletePickup/(:num)', 'PickupController::pickDelete/$1');
 $routes->post('delPickup/(:num)', 'PickupController::pickDelData/$1');
 $routes->post('removeFile', 'PickupController::removeFile');
 $routes->post('pickupStatus', 'PickupController::pickupStatus');
+$routes->get('viewPickup/(:num)', 'PickupController::viewPickup/$1');

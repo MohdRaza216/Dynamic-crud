@@ -97,7 +97,8 @@ class PickupController extends BaseController
             <td>' . $row->unit . '</td>
             <td>' . $tax . '</td>
             <td>' . $tax_newdata . '</td>
-            <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
+            <td><a class="editpenbtn" onclick="window.location.href = \'' . base_url() . 'viewPickup/' . $row->id . '\'"><img src="' . base_url() . '/assets/img/view.svg" height="15px" width="15px" alt=""></a>
+            <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'editPickup/' . $row->id . '`,`Edit pickup`)" ><i class="fa fa-edit"></i></button>
             <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>
             <td><label class="switchslider">
@@ -153,12 +154,18 @@ class PickupController extends BaseController
             return $this->response->setJSON(['error' => 'Failed to delete the file'])->setStatusCode(500);
         }
     }
-    public function pickupStatus(){
+    public function pickupStatus()
+    {
         $EarningTypeid = $this->request->getPost('earningTypeId');
         $newStatus = $this->request->getPost('newStatus');
 
         $this->pickup->set('status', $newStatus)->where('id', $EarningTypeid)->update();
         $result = 1;
         return json_encode($result);
+    }
+    public function viewPickup($id)
+    {
+        $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
+        return view('pickup/viewPickup', $data);
     }
 }
