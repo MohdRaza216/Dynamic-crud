@@ -27,6 +27,20 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchasegrp mb-1" for="tax">tax</label>
+                <select class="selectpicker form-control" name="tax" placeholder="Select tax">
+                    <?php foreach ($tax as $row) : ?>
+                        <option value="<?= $row->id ?>" <?= ($edit->tax == $row->id) ? "selected" : "" ?>>
+                            <?= ucfirst($row->name) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 blkftr">
             <div class="modal-footer taskfooter">
                 <button type="button" class="taskclose1" data-bs-dismiss="modal">

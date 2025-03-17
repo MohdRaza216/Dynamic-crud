@@ -120,6 +120,9 @@
                                     unit
                                 </th>
                                 <th>
+                                    tax
+                                </th>
+                                <th>
                                     Action
                                 </th>
                             </tr>

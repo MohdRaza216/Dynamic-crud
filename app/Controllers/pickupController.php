@@ -11,6 +11,7 @@ class PickupController extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->pickup = $this->db->table('pickup');
+        $this->tax = $this->db->table('tax');
     }
     public function pickIndex()
     {
@@ -19,7 +20,8 @@ class PickupController extends BaseController
 
     public function pickAdd()
     {
-        return view('pickup/addModal');
+        $data['tax'] = $this->tax->where('status',1)->get()->getResult();
+        return view('pickup/addModal', $data);
     }
 
     public function pickSave()
@@ -69,11 +71,18 @@ class PickupController extends BaseController
         $table = '';
         $id = 1;
         foreach ($data as $row) {
+            $taxs = $this->tax->where('id', $row->tax)->get()->getRow();
+
+            if ($taxs) {
+                $row->tax = $taxs->name;
+            }
+
             $table .= '
             <tr>
             <td>' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
             <td>' . $row->unit . '</td>
+            <td>' . $row->tax . '</td>
             <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
             <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>
@@ -85,6 +94,7 @@ class PickupController extends BaseController
     public function pickEdit($id)
     {
         $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();
+        $data['tax'] = $this->tax->where('status',1)->get()->getResult();
         return view('pickup/editModal',  $data);
     }
     public function pickUpdate($id)

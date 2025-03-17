@@ -22,7 +22,21 @@
                 <select class="selectpicker form-control" name="unit" placeholder="Select Unit">
                     <option value="inch" selected>inch</option>
                     <option value="cm">cm</option>
-                    </select>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchasegrp mb-1" for="tax">tax</label>
+                <select class="selectpicker form-control" name="tax" placeholder="Select tax">
+                    <?php foreach ($tax as $row) : ?>
+                        <option value="<?= $row->id ?>">
+                            <?= ucfirst($row->name) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
     </div>
@@ -38,27 +52,27 @@
     </div>
 </form>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#pickAdd').formValidation({
-                framework: 'bootstrap',
-                fields: {
-                    Fname: {
-                        validators: {
-                            notEmpty: {
-                                message: 'This field is required'
-                            },
-                        }
-                    },
-                    Fage: {
-                        validators: {
-                            notEmpty: {
-                                message: 'This field is required'
-                            },
-                        }
+            framework: 'bootstrap',
+            fields: {
+                Fname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },
+                Fage: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
                     }
                 }
-            })
-            .on('success.form.fv', function(e) {
+            }
+        })
+            .on('success.form.fv', function (e) {
                 e.preventDefault();
                 var form = document.querySelector('#pickAdd');
                 var dataForm = new FormData(form);
@@ -70,7 +84,7 @@
                     contentType: false,
                     processData: false,
                     dataType: 'json',
-                    success: function(result) {
+                    success: function (result) {
                         toastr.success('Added successfully', 'Success');
                         getUsers();
                         $('#modal_md').modal('hide');

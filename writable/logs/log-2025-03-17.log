@@ -1,0 +1,140 @@
+CRITICAL - 2025-03-17 05:02:46 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:48 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:48 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:49 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:49 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:49 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/8]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:50 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/7]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:50 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/7]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:50 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/7]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 05:02:50 --> ErrorException: Undefined variable $tax
+[Method: GET, Route: editPickup/7]
+in APPPATH\Views\pickup\editModal.php on line 34.
+ 1 APPPATH\Views\pickup\editModal.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tax', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\editModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/editModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(91): view('pickup/editModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickEdit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
