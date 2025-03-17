@@ -83,10 +83,14 @@
 
         .tag {
             font-size: 0.75em !important;
-            border: 1px solid rgb(196, 200, 203) !important;
+            border-width: 1px !important;
+            border-style: solid !important;
+            border-color: rgb(196, 200, 203) !important;
+            border-image: initial !important;
             padding: 0.25em 0.4em !important;
             border-radius: 6px !important;
             margin: 0.2em !important;
+
         }
     </style>
 </head>
@@ -120,6 +124,9 @@
                                 </th>
                                 <th>
                                     tax
+                                </th>
+                                <th>
+                                    tax_new
                                 </th>
                                 <th>
                                     Action

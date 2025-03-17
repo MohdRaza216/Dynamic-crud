@@ -171,3 +171,101 @@ in APPPATH\Controllers\pickupController.php on line 127.
  6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:41 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:46 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:47 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:47 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:47 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:48 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 10:05:48 --> ErrorException: Undefined variable $edit
+[Method: GET, Route: addModal]
+in APPPATH\Views\pickup\addModal.php on line 61.
+ 1 APPPATH\Views\pickup\addModal.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit', 'C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myapp\\app\\Views\\pickup\\addModal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pickup/addModal', [], true)
+ 5 APPPATH\Controllers\pickupController.php(24): view('pickup/addModal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PickupController->pickAdd()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PickupController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

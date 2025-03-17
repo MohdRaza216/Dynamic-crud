@@ -37,6 +37,7 @@ class PickupController extends BaseController
         } else {
             unset($input['file']);
         }
+        $input['tax_new'] = isset($input['tax_new']) ? implode(',', $input['tax_new']) : '';
         $result = $this->pickup->insert($input);
         return json_encode($result);
 
@@ -71,9 +72,18 @@ class PickupController extends BaseController
             $profileImage = !empty($row->file_location) ? base_url($row->file_location) : base_url('assets/img/user.png');
 
             $taxs = $this->tax->where('id', $row->tax)->get()->getRow();
-
+            $tax = '';
             if ($taxs) {
-                $row->tax = $taxs->name;
+                $tax = $taxs->name;
+            }
+
+            $tax_newdata = '';
+            if (!empty($row->tax_new)) {
+                $taxes = explode(',', $row->tax_new);
+                foreach ($taxes as $tax_data) {
+                    $tax_name = $this->tax->where('id', $tax_data)->get()->getRow();
+                    $tax_newdata .= '<span class="tag">' . trim($tax_name?->name) . '</span> ';
+                }
             }
 
             $table .= '
@@ -81,7 +91,8 @@ class PickupController extends BaseController
             <td><img src="' . $profileImage . '" class="staff-profile-image-small"> ' . $row->Fname . '</td>
             <td>' . $row->Fage . '</td>
             <td>' . $row->unit . '</td>
-            <td>' . $row->tax . '</td>
+            <td>' . $tax . '</td>
+            <td>' . $tax_newdata . '</td>
             <td><button class="editpenbtn" type="button" onclick="showComModal(\'' . base_url() . 'editPickup/' . $row->id . '\', \'Edit pickup\')"><i class="fas fa-edit "></i></button>
             <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
             </td>
@@ -108,6 +119,7 @@ class PickupController extends BaseController
         } else {
             unset($input['file']);
         }
+        $input['tax_new'] = isset($input['tax_new']) ? implode(',', $input['tax_new']) : '';
         $result = $this->pickup->where('id', $id)->update($input);
         return json_encode($result);
     }

@@ -69,6 +69,23 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchaseinfo repeat mb-1">tax_new</label>
+                <div class="dropdown-with-icon dropdownalignment">
+                    <select class="selectpicker form-control" name="tax_new[]" multiple data-actions-box="true"
+                        data-live-search="true" title="Select Service">
+                        <?php if (!empty($tax)) { ?>
+                            <?php foreach ($tax as $row) { ?>
+                                <option value="<?= $row->id ?>" <?= in_array($row->id, explode(',', $edit->tax_new)) ? "selected" : "" ?>><?= ucfirst($row->name) ?></option>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 blkftr">
             <div class="modal-footer taskfooter">
                 <button type="button" class="taskclose1" data-bs-dismiss="modal">
