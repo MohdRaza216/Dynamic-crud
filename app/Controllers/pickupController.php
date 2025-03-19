@@ -67,17 +67,24 @@ class PickupController extends BaseController
 
     public function pickTable()
     {
-        $data = $this->pickup->orderBy('id', 'desc')->get()->getResult();
+        $start_date = $this->request->getPost('start_date');
+        $end_date = $this->request->getPost('end_date');
+
+        $builder = $this->pickup->orderBy('id', 'desc');
+
+        if (!empty($start_date) && !empty($end_date)) {
+            $builder->where('created_at >=', $start_date . ' 00:00:00');
+            $builder->where('created_at <=', $end_date . ' 23:59:59');
+        }
+
+        $data = $builder->get()->getResult();
         $table = '';
         $id = 1;
         foreach ($data as $row) {
             $profileImage = !empty($row->file_location) ? base_url($row->file_location) : base_url('assets/img/user.png');
 
             $taxs = $this->tax->where('id', $row->tax)->get()->getRow();
-            $tax = '';
-            if ($taxs) {
-                $tax = $taxs->name;
-            }
+            $tax = $taxs ? $taxs->name : '';
 
             $tax_newdata = '';
             if (!empty($row->tax_new)) {
@@ -91,25 +98,27 @@ class PickupController extends BaseController
             $checked = $row->status == 1 ? 'checked' : '';
 
             $table .= '
-            <tr>
-            <td><img src="' . $profileImage . '" class="staff-profile-image-small"> ' . $row->Fname . '</td>
-            <td>' . $row->Fage . '</td>
-            <td>' . $row->unit . '</td>
-            <td>' . $tax . '</td>
-            <td>' . $tax_newdata . '</td>
-            <td><a class="editpenbtn" onclick="window.location.href = \'' . base_url() . 'viewPickup/' . $row->id . '\'"><img src="' . base_url() . '/assets/img/view.svg" height="15px" width="15px" alt=""></a>
-            <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'editPickup/' . $row->id . '`,`Edit pickup`)" ><i class="fa fa-edit"></i></button>
-            <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
-            </td>
-            <td><label class="switchslider">
-                        <input type="checkbox" class="myButton earningsstatus-toggle" class=" myButton earningsstatus-toggle" data-earningsid="' . $row->id . '" ' . $checked . ' />
-                        <span class="slider round"></span>
-                    </label></td>
-            </tr>';
+        <tr>
+        <td><img src="' . $profileImage . '" class="staff-profile-image-small"> ' . $row->Fname . '</td>
+        <td>' . $row->Fage . '</td>
+        <td>' . $row->unit . '</td>
+        <td>' . $tax . '</td>
+        <td>' . $tax_newdata . '</td>
+        <td>' . $row->created_at . '</td>
+        <td><a class="editpenbtn" onclick="window.location.href = \'' . base_url() . 'viewPickup/' . $row->id . '\'"><img src="' . base_url() . '/assets/img/view.svg" height="15px" width="15px" alt=""></a>
+        <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'editPickup/' . $row->id . '`,`Edit pickup`)" ><i class="fa fa-edit"></i></button>
+        <button class="editpenbtn" type="button" onclick="showComModal(`' . base_url() . 'deletePickup/' . $row->id . '`,`Delete pickup`)"><i class="fa-regular fa-trash-can "></i></button>
+        </td>
+        <td><label class="switchslider">
+                    <input type="checkbox" class="myButton earningsstatus-toggle" data-earningsid="' . $row->id . '" ' . $checked . ' />
+                    <span class="slider round"></span>
+                </label></td>
+        </tr>';
             $id++;
         }
         return json_encode($table);
     }
+
     public function pickEdit($id)
     {
         $data['edit'] = $this->pickup->where('id', $id)->get()->getRow();

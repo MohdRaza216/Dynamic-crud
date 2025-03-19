@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>
+        Sales Queen - Inventory Management System
+    </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/salesqueen_logo.jpeg" type="image/x-icon">
 
@@ -12,10 +14,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
     <!-- Stylesheets -->
     <link href="<?= base_url() ?>/assets/css/sidebar.css" rel="stylesheet">
@@ -66,6 +68,7 @@
     <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
     <script src="https://jsuites.net/v4/jsuites.js"></script>
     <script src="<?= base_url() ?>/assets/js/daterangepicker.min.js"></script>
+    <script src="<?= base_url() ?>/assets/js/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script src="<?= base_url() ?>/assets/js/nav_notification.js"></script>
@@ -96,21 +99,37 @@
 </head>
 
 <body>
-<div class="tblcontainer1 container-fluid">
+    <div class="tblcontainer1 container-fluid">
         <div class="row">
             <div class="col-md-10 qarow">
                 <h5>USER DATA</h5>
             </div>
             <div class="col-md-2">
-                <button type="button" class="hrbtns contractbtn pull-right" onclick="showComModal(`<?= base_url('addModal') ?>`,`Add pickup`)">
+                <button type="button" class="hrbtns contractbtn pull-right"
+                    onclick="showComModal(`<?= base_url('addModal') ?>`,`Add pickup`)">
                     <i class="fa-solid fa-plus "></i> ADD USER</button>
             </div>
         </div>
 
+        <div class="row mb-3">
+            <div class="col-md-3 mt-3">
+                <label for="dateFilter" class="mb-2">Date Filter:</label>
+                <input type="text" id="daterange_textbox" class="form-control" placeholder="All Dates" readonly style="width: 200px;">
+                <select id="dateFilter" class="form-select form-control selectpicker"
+                    aria-label="Default select example">
+                    <option value="">All Dates</option>
+                    <option value="today">Today</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="last7days">Last 7 Days</option>
+                    <option value="last30days">Last 30 Days</option>
+                </select>
+            </div>
+        </div>
         <div class="row mt-3">
             <div class="col-md-12">
                 <div class="demo-html mt-0">
-                    <table class="example display dataTable display responsive nowrap tblalign table borderless" style="width: 100%" aria-describedby="example_info">
+                    <table class="example display dataTable display responsive nowrap tblalign table borderless"
+                        style="width: 100%" aria-describedby="example_info" id="pickupTable">
                         <thead class="theadrow">
                             <tr>
                                 <th>
@@ -127,6 +146,9 @@
                                 </th>
                                 <th>
                                     tax_new
+                                </th>
+                                <th>
+                                    Date & Time
                                 </th>
                                 <th>
                                     Action
@@ -170,152 +192,148 @@
     </div>
 
 
-            <!----view toggle-->
-            <div id="sec_col" class="col-md-6 exptblecol sec-column tablesideopenermt-3 p-2">
-                <div id="showcontent" class="displaysblock">
-                    <div class="expbodysec sec-column-body p-3">
-                        <div class="fixed-buttons-right">
+    <!----view toggle-->
+    <div id="sec_col" class="col-md-6 exptblecol sec-column tablesideopenermt-3 p-2">
+        <div id="showcontent" class="displaysblock">
+            <div class="expbodysec sec-column-body p-3">
+                <div class="fixed-buttons-right">
 
-                            <button type="button" class="editpenbtn " data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" data-bs-title="Edit Expense" id="view_edit"><i
-                                    class="fa fa-edit expicon "></i></button>
-                            <button id="view_print" type="button" class="editpenbtn" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" data-bs-title="Print"><i
-                                    class="bi bi-printer expicon "></i></button>
-                            <button id="view_pdf" type="button" class="editpenbtn" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" data-bs-title="Pdf"><i
-                                    class="bi bi-file-earmark-pdf"></i></button>
-                            <button type="button" class="editpenbtn" id="view_copy" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" data-bs-title="Copy"><i
-                                    class="fa fa-clone expicon "></i></i></button>
-                            <button type="button" class="editpenbtn" id="delete_view" data-bs-toggle="tooltip"
-                                data-bs-placement="bottom" data-bs-title="Delete">
-                                <!-- <i class="fa fa-times expicon"></i> -->
-                                <img src="assets/img/delete.svg" alt="">
-                            </button>
-                            <button type="button" onclick="togg(1)" class="editpenbtn "
-                                class="contractfilter edittglbtn5 edittglbtn6 viewbtnByToggle" data-bs-toggle="tooltip"
-                                data-bs-title="Toggle Table" data-bs-original-title="" title="" data-bs-trigger="hover">
-                                <i class="fa-solid fa-angle-left isvg" aria-hidden="true"></i>
-                            </button>
-                            <span id="view_invoice"></span>
+                    <button type="button" class="editpenbtn " data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        data-bs-title="Edit Expense" id="view_edit"><i class="fa fa-edit expicon "></i></button>
+                    <button id="view_print" type="button" class="editpenbtn" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-title="Print"><i class="bi bi-printer expicon "></i></button>
+                    <button id="view_pdf" type="button" class="editpenbtn" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-title="Pdf"><i class="bi bi-file-earmark-pdf"></i></button>
+                    <button type="button" class="editpenbtn" id="view_copy" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-title="Copy"><i
+                            class="fa fa-clone expicon "></i></i></button>
+                    <button type="button" class="editpenbtn" id="delete_view" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-title="Delete">
+                        <!-- <i class="fa fa-times expicon"></i> -->
+                        <img src="assets/img/delete.svg" alt="">
+                    </button>
+                    <button type="button" onclick="togg(1)" class="editpenbtn "
+                        class="contractfilter edittglbtn5 edittglbtn6 viewbtnByToggle" data-bs-toggle="tooltip"
+                        data-bs-title="Toggle Table" data-bs-original-title="" title="" data-bs-trigger="hover">
+                        <i class="fa-solid fa-angle-left isvg" aria-hidden="true"></i>
+                    </button>
+                    <span id="view_invoice"></span>
+                </div>
+                <!--demo-->
+
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <div class="desktop desk-mrg-top20">
+                            <div class="scroll-images custml toptea border-bott">
+                                <div class="child mb-0 ms-3 childd-tabb">
+                                    <button class="tablinks tb-links childd-tabb-links active"
+                                        onclick="openTab(event, 'Tab1')">PREVIEW</button>
+                                </div>
+
+                                <div class="child mb-0 childd-tabb">
+                                    <button id="expandbtn" class="tablinks tb-links expand-button childd-tabb-links"
+                                        data-toggle="tooltip" data-bs-title="Toggle full view"
+                                        data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"><i
+                                            class="fa fa-expand"></i></button>
+                                </div>
+
+                            </div>
                         </div>
-                        <!--demo-->
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner scroll-images">
 
-                        <div class="row ">
-                            <div class="col-md-12 ">
-                                <div class="desktop desk-mrg-top20">
-                                    <div class="scroll-images custml toptea border-bott">
-                                        <div class="child mb-0 ms-3 childd-tabb">
-                                            <button class="tablinks tb-links childd-tabb-links active"
+                                <div class="carousel-item active">
+                                    <div class="container">
+                                        <div class="child childauto mb-0">
+                                            <button class="tablinks tabresact childd-tabb-links-carsl active"
                                                 onclick="openTab(event, 'Tab1')">PREVIEW</button>
                                         </div>
-
-                                        <div class="child mb-0 childd-tabb">
-                                            <button id="expandbtn"
-                                                class="tablinks tb-links expand-button childd-tabb-links"
-                                                data-toggle="tooltip" data-bs-title="Toggle full view"
-                                                data-bs-custom-class="custom-tooltip" data-bs-trigger="hover"><i
-                                                    class="fa fa-expand"></i></button>
-                                        </div>
-
                                     </div>
                                 </div>
-                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
-                                    <div class="carousel-inner scroll-images">
-
-                                        <div class="carousel-item active">
-                                            <div class="container">
-                                                <div class="child childauto mb-0">
-                                                    <button class="tablinks tabresact childd-tabb-links-carsl active"
-                                                        onclick="openTab(event, 'Tab1')">PREVIEW</button>
-                                                </div>
-                                            </div>
-                                        </div>
 
 
-                                        <button id="prevButton" class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <i class="bi bi-chevron-left icon"></i>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
+                                <button id="prevButton" class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <i class="bi bi-chevron-left icon"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
 
-                                        <button id="nextButton" class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <i class="bi bi-chevron-right icon"></i>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <hr class="fileline ">
+                                <button id="nextButton" class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <i class="bi bi-chevron-right icon"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
-
-                        <!-- For Tab 1 -->
-                        <div id="Tab1" class="tabcontent ">
-                            <!-- Preferred Module Section -->
-                            <div class="row row-mtop10 draggable-section" id="preferredModule" draggable="true"
-                                ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                <div class="col-md-12">
-                                    <h4 class="general-info23 general-info-color index_sideview_head">AMC</h4>
-                                </div>
-                                <div class="index3_view_hr">
-                                    <hr class="fileline" />
-                                </div>
-                                <div class="row tb-margin">
-                                    <div class="col-md-12">
-                                        <table class="details-table table table-striped tblebrdr">
-                                            <tbody>
-                                                <tr class="project-overview greyback">
-                                                    <td class="viewjobft"><b>Purchase Request : </b></td>
-                                                    <td class="viewjobft">01</td>
-                                                </tr>
-                                                <tr class="project-overview greyback">
-                                                    <td class="viewjobft"><b>Purchase Request : </b></td>
-                                                    <td class="viewjobft">01</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Module Head Section -->
-                            <div class="row row-mtop10 draggable-section" id="moduleHead" draggable="true"
-                                ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                <div class="col-md-12">
-                                    <h4 class="general-info23 general-info-color index_sideview_head">Logistics</h4>
-                                </div>
-                                <div class="index3_view_hr">
-                                    <hr class="fileline" />
-                                </div>
-                                <div class="row tb-margin">
-                                    <div class="col-md-12">
-                                        <table class="details-table table table-striped tblebrdr">
-                                            <tbody>
-                                                <tr class="project-overview greyback">
-                                                    <td class="viewjobft"><b>Purchase Request : </b></td>
-                                                    <td class="viewjobft">01</td>
-                                                </tr>
-                                                <tr class="project-overview greyback">
-                                                    <td class="viewjobft"><b>Purchase Request : </b></td>
-                                                    <td class="viewjobft">01</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <!--demo end-->
+                        <hr class="fileline ">
                     </div>
                 </div>
 
+                <!-- For Tab 1 -->
+                <div id="Tab1" class="tabcontent ">
+                    <!-- Preferred Module Section -->
+                    <div class="row row-mtop10 draggable-section" id="preferredModule" draggable="true"
+                        ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="col-md-12">
+                            <h4 class="general-info23 general-info-color index_sideview_head">AMC</h4>
+                        </div>
+                        <div class="index3_view_hr">
+                            <hr class="fileline" />
+                        </div>
+                        <div class="row tb-margin">
+                            <div class="col-md-12">
+                                <table class="details-table table table-striped tblebrdr">
+                                    <tbody>
+                                        <tr class="project-overview greyback">
+                                            <td class="viewjobft"><b>Purchase Request : </b></td>
+                                            <td class="viewjobft">01</td>
+                                        </tr>
+                                        <tr class="project-overview greyback">
+                                            <td class="viewjobft"><b>Purchase Request : </b></td>
+                                            <td class="viewjobft">01</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module Head Section -->
+                    <div class="row row-mtop10 draggable-section" id="moduleHead" draggable="true"
+                        ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="col-md-12">
+                            <h4 class="general-info23 general-info-color index_sideview_head">Logistics</h4>
+                        </div>
+                        <div class="index3_view_hr">
+                            <hr class="fileline" />
+                        </div>
+                        <div class="row tb-margin">
+                            <div class="col-md-12">
+                                <table class="details-table table table-striped tblebrdr">
+                                    <tbody>
+                                        <tr class="project-overview greyback">
+                                            <td class="viewjobft"><b>Purchase Request : </b></td>
+                                            <td class="viewjobft">01</td>
+                                        </tr>
+                                        <tr class="project-overview greyback">
+                                            <td class="viewjobft"><b>Purchase Request : </b></td>
+                                            <td class="viewjobft">01</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--demo end-->
             </div>
         </div>
+
+    </div>
+    </div>
 
     </div>
 
@@ -991,16 +1009,18 @@ $("#first_col").show();
         }
     </script>
     <script>
-        function getUsers() {
+        function getUsers(start_date = '', end_date = '') {
             $.ajax({
                 type: 'POST',
                 url: '<?= base_url() ?>/fetchPick',
+                data: { start_date: start_date, end_date: end_date }, // pass date
                 dataType: 'json',
                 success: function (table) {
                     $('#sales-table').html(table);
                 }
             });
         }
+
         getUsers();
     </script>
     <script>
@@ -1040,6 +1060,35 @@ $("#first_col").show();
             });
         });
     </script>
+    <script>
+        $('#daterange_textbox').daterangepicker({
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            opens: 'left',
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        }, function (start, end, label) {
+            $('#daterange_textbox').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+            // Call getUsers() with dates
+            getUsers(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'));
+        });
+
+        // Clear filter
+        $('#daterange_textbox').on('cancel.daterangepicker', function (ev, picker) {
+            $(this).val('');
+            getUsers(); // load all
+        });
+
+    </script>
+
 </body>
 
 </html>
