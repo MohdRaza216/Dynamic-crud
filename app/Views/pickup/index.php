@@ -114,15 +114,8 @@
         <div class="row mb-3">
             <div class="col-md-3 mt-3">
                 <label for="dateFilter" class="mb-2">Date Filter:</label>
-                <input type="text" id="daterange_textbox" class="form-control" placeholder="All Dates" readonly style="width: 200px;">
-                <select id="dateFilter" class="form-select form-control selectpicker"
-                    aria-label="Default select example">
-                    <option value="">All Dates</option>
-                    <option value="today">Today</option>
-                    <option value="yesterday">Yesterday</option>
-                    <option value="last7days">Last 7 Days</option>
-                    <option value="last30days">Last 30 Days</option>
-                </select>
+                <input type="text" id="daterange_textbox" class="form-control" placeholder="All Dates" readonly
+                    style="width: 200px;" cursor="pointer">
             </div>
         </div>
         <div class="row mt-3">
